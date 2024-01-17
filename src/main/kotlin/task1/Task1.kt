@@ -8,7 +8,7 @@ fun main(args: Array<String>) {
     solver.fizzBuzz(10)
     val stringToReverse="ABC123"
 
-    println("Reversed:${stringToReverse.reversed()}")
+    println("Reversed:${solver.reverse(stringToReverse)}")
 
     val numbers= arrayOf(1,2,3,4,5,6,7,0,9)
 
