@@ -10,7 +10,8 @@ package com.example.logicexercises
     If the number is divisible by 3, print "Fizz."
     If the number is divisible by 5, print "Buzz."
     If the number is divisible by both 3 and 5, print "FizzBuzz."
-    If none of the above conditions are met, print the number itself.
+    If none of the above conditions are met, print the number itself. 
+* */
 
     fun main() {
     for(i in 1..100){
@@ -26,7 +27,7 @@ package com.example.logicexercises
         else println(i)
     }
 }
-* */
+
 
 
 /*
@@ -36,7 +37,7 @@ package com.example.logicexercises
 •	Example:
 •	Input: "Hello, World!"
 •	Output: "!dlroW ,olleH"
-
+*/
 
 
 fun main(){
@@ -44,7 +45,7 @@ fun main(){
     println("The original phrase: $phrase")
     println("The phrase reversed is: $phrase.reversed()")
 }
- */
+ 
 
 /*
     Exercise 3:
