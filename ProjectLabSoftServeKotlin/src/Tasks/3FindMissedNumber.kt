@@ -1,6 +1,3 @@
-//Find the missing number
-//Not sure about if this one is ok but... 
-
 fun findTheMissedNumber(array: IntArray): Int {
     val n = array.size
     val totalSum = n * (n + 1) / 2

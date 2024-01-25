@@ -1,4 +1,4 @@
-open class Character(
+open class Character2(
     val name: String,
     var healthPoints: Int,
     val attackPoints: Int
@@ -10,7 +10,7 @@ open class Character(
         }
     }
 
-    open fun attack(target: Character) {
+    open fun attack(target: Character2) {
         target.takeDamage(attackPoints)
         println("$name attack ${target.name} using ${attackPoints} damage.")
     }
@@ -21,8 +21,8 @@ class Wizard(
     healthPoints: Int,
     attackPoints: Int,
     var manaPoints: Int
-) : Character(name, healthPoints, attackPoints) {
-    override fun attack(target: Character) {
+) : Character2(name, healthPoints, attackPoints) {
+    override fun attack(target: Character2) {
         if (manaPoints >= 20) {
             target.takeDamage(2 * attackPoints)
             println("$name cast a spell on ${target.name} using ${2 * attackPoints} damage.")
@@ -33,14 +33,14 @@ class Wizard(
     }
 }
 
-fun printlnBatleStatus(character: Character) {
+fun printlnBatleStatus(character: Character2) {
     println("----------------")
     println("${character.name} was injured\nHealth: ${character.healthPoints}")
     println("----------------")
 }
 
 fun main() {
-    val character1 = Character("Kili", 200, 90)
+    val character1 = Character2("Kili", 200, 90)
     val character2 = Wizard("Gandalf the white", 1000, 200, 100)
 
 
@@ -56,6 +56,7 @@ fun main() {
         printlnBatleStatus(character2)
 
         character2.attack(character1)
+        println("Health: ${character2.healthPoints}")
         printlnBatleStatus(character1)
     }
     if (character1.healthPoints > 0) {

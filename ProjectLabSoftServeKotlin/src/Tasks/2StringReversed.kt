@@ -7,6 +7,7 @@ fun stringReversed(string: String): String {
 fun main() {
     val normalString = "I'm not in danger skyler, I'm the danger"
     val reversedString = stringReversed(normalString)
+    println("------Reverse a String------")
     println("Normal: $normalString")
     println("Reversed: $reversedString")
 }

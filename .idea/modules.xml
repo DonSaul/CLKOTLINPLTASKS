@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/CLKOTLINPLTASKS.iml" filepath="$PROJECT_DIR$/.idea/CLKOTLINPLTASKS.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ProjectLabSoftServeKotlin/ProjectLabSoftServeKotlin.iml" filepath="$PROJECT_DIR$/ProjectLabSoftServeKotlin/ProjectLabSoftServeKotlin.iml" />
     </modules>
   </component>
 </project>
