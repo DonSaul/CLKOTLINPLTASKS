@@ -1,3 +1,5 @@
+package Tasks.week1.WarriorAndKnight
+
 open class Warrior() {
     var health: Int = 20
     open val attack: Int = 1
