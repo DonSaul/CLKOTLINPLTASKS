@@ -1,4 +1,4 @@
-package Tasks.week1.ArmyBattle
+package tasks.week1.ArmyBattle
 
 abstract class UnitArmy {
     var health: Int = 0

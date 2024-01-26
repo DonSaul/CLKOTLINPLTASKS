@@ -1,4 +1,4 @@
-package Tasks.week1.WarriorAndKnight
+package tasks.week1.WarriorAndKnight
 
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.DisplayName

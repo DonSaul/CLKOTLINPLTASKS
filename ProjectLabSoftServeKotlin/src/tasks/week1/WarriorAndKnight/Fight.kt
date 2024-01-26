@@ -1,4 +1,4 @@
-package Tasks.week1.WarriorAndKnight
+package tasks.week1.WarriorAndKnight
 
 fun fight(warrior: Warrior, knight: Warrior): Boolean {
     println("--Warrior Vs Knight--")

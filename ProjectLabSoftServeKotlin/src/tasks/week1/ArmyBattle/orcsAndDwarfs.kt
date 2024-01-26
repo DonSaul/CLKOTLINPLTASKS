@@ -1,6 +1,6 @@
-package Tasks.week1.ArmyBattle
+package tasks.week1.ArmyBattle
 
-class Warrior:UnitArmy() {
+class Orcs:UnitArmy() {
     override val attack: Int = 5
         init {
             health = 20
@@ -10,7 +10,7 @@ class Warrior:UnitArmy() {
     }
 }
 
-class Knight:UnitArmy() {
+class Dwarfs:UnitArmy() {
     override val attack: Int = 10
     init {
         health = 30

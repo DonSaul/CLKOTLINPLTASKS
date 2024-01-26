@@ -1,4 +1,4 @@
-package Tasks.week1.WarriorAndKnight
+package tasks.week1.WarriorAndKnight
 
 open class Warrior() {
     var health: Int = 20
