@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/warriorAndKnight.iml" filepath="$PROJECT_DIR$/warriorAndKnight.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/CLKOTLINPLTASKS.iml" filepath="$PROJECT_DIR$/.idea/CLKOTLINPLTASKS.iml" />
     </modules>
   </component>
 </project>
