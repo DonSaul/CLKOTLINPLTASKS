@@ -1,15 +1,16 @@
 fun main() {
     println(reverseString("Hello, World!"))
+    println(reverseStringManual("Hello, World!"))
 }
 
 fun reverseString(str: String): String {
-    return str.reversed();
+    return str.reversed()
 }
 
 fun reverseStringManual(str: String): String {
-    val reversed = StringBuilder();
+    val reversed = StringBuilder()
     for(i in str.length - 1 downTo 0) {
-        reversed.append(str[i]);
+        reversed.append(str[i])
     }
     return reversed.toString()
 }
