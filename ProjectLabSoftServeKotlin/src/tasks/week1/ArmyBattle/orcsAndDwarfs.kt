@@ -1,5 +1,7 @@
 package tasks.week1.ArmyBattle
 
+
+//realize call
 class Orcs:UnitArmy() {
     override val attack: Int = 5
         init {
@@ -11,7 +13,7 @@ class Orcs:UnitArmy() {
 }
 
 class Dwarfs:UnitArmy() {
-    override val attack: Int = 10
+    override val attack: Int = 5
     init {
         health = 30
     }

@@ -1,6 +1,6 @@
 package tasks.week1.WarriorAndKnight
 
-fun fight(warrior: Warrior, knight: Warrior): Boolean {
+fun fight(warrior: Fighter, knight: Fighter): Boolean {
     println("--Warrior Vs Knight--")
     println("Warrior health: ${warrior.health} || Level attack of warrior: ${warrior.attack}")
     println("Knight health: ${knight.health} || Level attack of Knight: ${knight.attack}")

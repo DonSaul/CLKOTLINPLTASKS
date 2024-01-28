@@ -19,3 +19,4 @@ fun main() {
     println("Dwarfs Vs Orcs 1: ${fight(myArmy, enemyArmy)}")
     println("Second Battle: ${fight(newArmy, newArmy2)}")
 }
+

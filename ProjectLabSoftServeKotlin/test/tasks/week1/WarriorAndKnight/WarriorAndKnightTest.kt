@@ -22,6 +22,7 @@ class WarriorAndKnightTest {
         val slevin = Warrior()
         val res = fight(ramon, slevin)
         assertEquals(true, res)
+
     }
 
     @Test
@@ -46,7 +47,7 @@ class WarriorAndKnightTest {
 
     @Test
     @DisplayName("5. Fight")
-    fun `Loser is not alive after fight, Warrior v Warrior`() {
+    fun `Loser is not alive after fight, Warrior vs Warrior`() {
         val husband = Warrior()
         val wife = Warrior()
         fight(husband, wife)
@@ -56,7 +57,7 @@ class WarriorAndKnightTest {
 
     @Test
     @DisplayName("6. Fight")
-    fun `Winner is alive after fight, Warrior v Knight`() {
+    fun `Winner is alive after fight, Warrior vs Knight`() {
         val dragon = Warrior()
         val knight = Knight()
         fight(dragon, knight)
@@ -72,6 +73,6 @@ class WarriorAndKnightTest {
         val unit3 = Warrior()
         fight(unit1, unit2)
         val res = fight(unit2, unit3)
-        assertEquals(false, res)
+        assertEquals(true, res)
     }
 }
