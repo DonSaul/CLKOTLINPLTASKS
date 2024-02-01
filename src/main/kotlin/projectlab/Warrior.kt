@@ -12,12 +12,15 @@ package org.softserve.projectlab
  * @param attack El daño infligido en cada ataque.
  */
 open class Warrior(
-    var health: Int = 50,
-    var attack: Int = 5
+    open var health: Int = 50,
+    open val attack: Int = 5
 ) {
     /**
-     * Devuelve true si el guerrero está vivo (su salud es mayor que 0), false de lo contrario.
+     * @return true si el guerrero está vivo (su salud es mayor que 0), false de lo contrario.
      */
     val isAlive: Boolean
         get() = health > 0
+    open fun makeDamage(damage: Int) {
+        health -= damage
+    }
 }
