@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="520af590-cb0e-43ba-9d3a-8d95b884d829" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/CLKOTLINPLTASKS.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/task2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Problems/armyBattles/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Problems/armyBattles/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Problems/armyBattles/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Problems/armyBattles/.idea/kotlinc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Problems/armyBattles/.idea/libraries/KotlinJavaRuntime.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Problems/armyBattles/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Problems/armyBattles/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Problems/armyBattles/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Problems/armyBattles/armyBattles.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Problems/armyBattles/src/Army.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Problems/armyBattles/src/Knight.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Problems/armyBattles/src/Main.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Problems/armyBattles/src/Warrior.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Problems/armyBattles/test/BattleArmyTest.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Problems/armyBattles/test/FightTest.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Problems/defender/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Problems/defender/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Problems/defender/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Problems/defender/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Problems/defender/build.gradle.kts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Problems/defender/gradle.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Problems/defender/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Problems/defender/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Problems/defender/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Problems/defender/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Problems/defender/settings.gradle.kts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Problems/defender/src/main/kotlin/Army.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Problems/defender/src/main/kotlin/Defender.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Problems/defender/src/main/kotlin/Knight.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Problems/defender/src/main/kotlin/Main.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Problems/defender/src/main/kotlin/Rockie.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Problems/defender/src/main/kotlin/Warrior.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Problems/defender/src/test/kotlin/BattleArmyTest.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Problems/defender/src/test/kotlin/DefenderTest.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Problems/defender/src/test/kotlin/FightTest.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Problems/task1/findNumber.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Problems/task1/fizzBuzz.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Problems/task1/reverseString.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Problems/task2/bankAccount.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Problems/task2/bankAccount.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Problems/task2/character.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Problems/task2/characterCreation.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Problems/warriorAndKnight/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Problems/warriorAndKnight/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Problems/warriorAndKnight/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Problems/warriorAndKnight/.idea/kotlinc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Problems/warriorAndKnight/.idea/libraries/KotlinJavaRuntime.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Problems/warriorAndKnight/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Problems/warriorAndKnight/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Problems/warriorAndKnight/src/Knight.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Problems/warriorAndKnight/src/Main.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Problems/warriorAndKnight/src/Warrior.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Problems/warriorAndKnight/test/FightTest.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Problems/warriorAndKnight/warriorAndKnight.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 0
+}]]></component>
+  <component name="ProjectId" id="2bkNMgKEfVglhTGdzBfXmiCpGWZ" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Kotlin.MainKt (1).executor": "Run",
+    "Kotlin.MainKt (2).executor": "Run",
+    "Kotlin.MainKt (3).executor": "Run",
+    "Kotlin.MainKt (4).executor": "Run",
+    "Kotlin.MainKt.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "esteban",
+    "kotlin-language-version-configured": "true",
+    "onboarding.tips.debug.path": "D:/Kaito/SoftServe Kotlin/CLKOTLINPLTASKS/src/main/kotlin/Main.kt"
+  }
+}]]></component>
+  <component name="RunManager" selected="Kotlin.MainKt (4)">
+    <configuration name="MainKt (1)" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MainKt" />
+      <module name="CLKOTLINPLTASKS" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainKt (2)" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="fizzbuzz.MainKt" />
+      <module name="CLKOTLINPLTASKS" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainKt (3)" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="task1.fizzbuzz.MainKt" />
+      <module name="CLKOTLINPLTASKS" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainKt (4)" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="task1.reversestring.MainKt" />
+      <module name="CLKOTLINPLTASKS" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.MainKt" />
+      <module name="CLKOTLINPLTASKS" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Kotlin.MainKt (4)" />
+        <item itemvalue="Kotlin.MainKt (3)" />
+        <item itemvalue="Kotlin.MainKt (2)" />
+        <item itemvalue="Kotlin.MainKt (1)" />
+        <item itemvalue="Kotlin.MainKt" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="520af590-cb0e-43ba-9d3a-8d95b884d829" name="Changes" comment="" />
+      <created>1706755072999</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1706755072999</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/main/kotlin/Main.kt</url>
+          <line>13</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
