@@ -1,3 +1,5 @@
+package org.softserve.task1.findnumber
+
 /**
  * For this task I created two functions, the first one (missingFirstNumberFinder()),
  * returns the first missing number of the ordered input, the second one (missingNumbersFinder()),
@@ -12,8 +14,6 @@
  *
  * Usefull learning: the "until" operator, that create ranges, excluding the max number in the iteration.
  */
-
-package task1.findnumber
 
 fun missingFirstNumberFinder(inputList: List<Int>): Int {
     val orderedList = inputList.sorted()

@@ -1,4 +1,4 @@
-package task2.charactercreation
+package org.softserve.task2.charactercreation
 
 open class Character(
     val name: String,

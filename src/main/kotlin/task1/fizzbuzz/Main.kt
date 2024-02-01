@@ -1,3 +1,5 @@
+package org.softserve.task1.fizzbuzz
+
 /**
  * First of all, for better readability, using the extension functionality I added the
  * methods necesary to check if the given number is divisible by 3, 5 or both.
@@ -8,7 +10,6 @@
  * - The "extension functionality", that allows to add new funtionality to a class without creating a new one
  *   or using decorators.
  */
-package task1.fizzbuzz
 
 fun Int.isDivisibleBy3(): Boolean =  this % 3 == 0
 fun Int.isDivisibleBy5(): Boolean =  this % 5 == 0

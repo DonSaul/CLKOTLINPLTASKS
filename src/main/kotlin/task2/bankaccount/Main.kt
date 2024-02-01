@@ -1,4 +1,4 @@
-package task2.bankaccount
+package org.softserve.task2.bankaccount
 
 class BankAccount(
     val accountHolder: String,
