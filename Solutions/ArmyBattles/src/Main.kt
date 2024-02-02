@@ -6,15 +6,21 @@ fun main() {
     val secondArmy = Army()
     secondArmy.addUnits(10) { Warrior() }
 
-    println(if(battle(firstArmy, secondArmy)) "First Army wins!" else "Second Army wins!")
+    val isFirstArmyWinner = battle(firstArmy, secondArmy)
+
+    println(if(isFirstArmyWinner) "First Army wins!" else "Second Army wins!")
 }
 
 fun battle(firstArmy: Army, secondArmy: Army) : Boolean {
+
     while(firstArmy.units.isNotEmpty() && secondArmy.units.isNotEmpty()) {
+
         val firstWarrior: Warrior = firstArmy.units.first()
         val secondWarrior: Warrior = secondArmy.units.first()
 
-        if(fight(firstWarrior, secondWarrior)) {
+        val isFirstWarriorWinner = fight(firstWarrior, secondWarrior)
+
+        if(isFirstWarriorWinner) {
             secondArmy.units.removeFirst()
         } else {
             firstArmy.units.removeFirst()
