@@ -1,10 +1,10 @@
 class Army {
 
-    val units = mutableListOf<Warrior>();
+    val units = mutableListOf<Warrior>()
 
-    fun addUnits(quantity: Int, createUnit: () -> Warrior) {
-        for(i in 1..quantity) {
-            units.add(createUnit())
+    fun addUnits(numberOfWarriors: Int, createWarrior: () -> Warrior) {
+        repeat(numberOfWarriors) {
+            units.add(createWarrior())
         }
     }
 }

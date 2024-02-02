@@ -95,13 +95,13 @@ class FightTest {
     @DisplayName("Fight Test 7: Knight loses when fighting consecutively")
     fun knightLosesWhenFightingConsecutively() {
         // given
-        val unit1 = Warrior()
-        val unit2 = Knight()
-        val unit3 = Warrior()
+        val firstWarrior = Warrior()
+        val knight = Knight()
+        val secondWarrior = Warrior()
 
         // when
-        fight(unit1, unit2)
-        val result = fight(unit2, unit3)
+        fight(firstWarrior, knight)
+        val result = fight(knight, secondWarrior)
 
         // then
         assertEquals(false, result)
