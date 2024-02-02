@@ -15,17 +15,17 @@ open class Character(val name: String, protected var healthPoints: Int, protecte
         println("¡$name has $healthPoints health points remaining!")
     }
 
-    fun attack(character: Character) {
+    fun attack(opponent: Character) {
         if(healthPoints == 0) return
 
-        println("¡$name attacks ${character.name} with $attackPoints points of damage!")
-        character.takeDamage(attackPoints)
+        println("¡$name attacks ${opponent.name} with $attackPoints points of damage!")
+        opponent.takeDamage(attackPoints)
     }
 }
 
 class Wizard(name: String, healthPoints: Int, attackPoints: Int, private var manaPoints: Int) : Character(name, healthPoints, attackPoints) {
 
-    fun attack(character: Character, manaPointsToAttack: Int) {
+    fun attack(opponent: Character, manaPointsToAttack: Int) {
         if(healthPoints == 0) return
 
         if(manaPointsToAttack > manaPoints) {
@@ -33,8 +33,8 @@ class Wizard(name: String, healthPoints: Int, attackPoints: Int, private var man
         }
 
         val totalAttackPoints = attackPoints + manaPointsToAttack
-        println("¡$name attacks ${character.name} with $totalAttackPoints points of damage!")
-        character.takeDamage(totalAttackPoints)
+        println("¡$name attacks ${opponent.name} with $totalAttackPoints points of damage!")
+        opponent.takeDamage(totalAttackPoints)
         manaPoints -= manaPointsToAttack
     }
 }
