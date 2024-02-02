@@ -1,4 +1,8 @@
-open class Character(val name: String, var healthPoints: Int, val attackPoints: Int) {
+open class Character(
+    val name: String,
+    var healthPoints: Int,
+    val attackPoints: Int
+) {
     fun takeDamage(damage: Int) {
         healthPoints -= damage
         println("$name took a damage of $damage, current HP is $healthPoints")
@@ -10,21 +14,20 @@ open class Character(val name: String, var healthPoints: Int, val attackPoints: 
     }
 }
 
-class Wizard(name: String, healthPoints: Int, attackPoints: Int, var manaPoints: Int) :
-    Character(name, healthPoints, attackPoints) {
-
-    fun attack(target: Character, attackType: String) {
-        if (attackType == "spell") {
-            if (manaPoints < 20) {
-                println("Spell failed, $name doesn't have enough mana points")
-            } else {
-                println("$name casted a magic spell on ${target.name}! Made ${attackPoints * 10} points of damage")
-                target.takeDamage(attackPoints * 10)
-                manaPoints -= 20
-            }
-        } else if (attackType == "attack" || attackType == "") {
+class Wizard(
+    name: String,
+    healthPoints: Int,
+    attackPoints: Int,
+    var manaPoints: Int
+) : Character(name, healthPoints, attackPoints) {
+    override fun attack(target: Character) {
+        if (manaPoints < 20) {
             println("$name hit ${target.name}! Made $attackPoints points of damage")
             target.takeDamage(attackPoints)
+        } else {
+            println("$name casted a magic spell on ${target.name}! Made ${attackPoints * 10} points of damage")
+            target.takeDamage(attackPoints * 10)
+            manaPoints -= 20
         }
     }
 }
@@ -40,13 +43,12 @@ fun main() {
     println()
     char1.attack(char3)
     char2.attack(char3)
-    char3.attack(char2, "spell")
-    char3.attack(char2, "spell")
-    char3.attack(char1, "spell")
-    println()
     char3.attack(char2)
-    char3.attack(char2, "spell")
-    char3.attack(char1, "attack")
+    char3.attack(char2)
+    char3.attack(char1)
+    char3.attack(char2)
+    char3.attack(char2)
+    char3.attack(char1)
     println()
     println("name: ${char1.name} health:${char1.healthPoints} attack: ${char1.attackPoints}")
     println("name: ${char2.name} health:${char2.healthPoints} attack: ${char2.attackPoints}")

@@ -1,5 +1,5 @@
-class BankAccount(accountNumber: String, accountHolder: String) {
-    var balance: Double = 0.0
+class BankAccount(val accountNumber: String, val accountHolder: String) {
+    private var balance: Double = 0.0
 
     fun withdraw(amount: Double) {
         if (balance >= amount) {
@@ -22,7 +22,7 @@ class BankAccount(accountNumber: String, accountHolder: String) {
 
 fun main() {
     val myAccount = BankAccount("1234", "Jane Doe")
-    myAccount.getBalance()
+    println("Account holder: ${myAccount.accountHolder} Account N°: ${myAccount.accountNumber} ")
     myAccount.deposit(20.0)
     myAccount.withdraw(50.5)
     myAccount.deposit(100.0)

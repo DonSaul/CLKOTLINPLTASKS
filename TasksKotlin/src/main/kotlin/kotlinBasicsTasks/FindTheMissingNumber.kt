@@ -1,3 +1,5 @@
+package main.kotlin.kotlinBasicsTasks
+
 val numArray = arrayOf(3, 0, 1)
 val maxNum = numArray.max()
 
