@@ -19,7 +19,6 @@ class ArmyTest{
         val res=fight(army1,army2)
         assertEquals(false,res)
 
-
     }
 
     @Test
@@ -85,15 +84,17 @@ class ArmyTest{
     @Test
     @DisplayName("6. Battle")
     fun `eleven warrior army v seven warrior army returns true`(){
+        //Given
         val army1=Army()
         val army2=Army()
-
         army1.addUnits(11){ Warrior() }
         army2.addUnits(7){Warrior()}
 
+        //When
         val res=fight(army1,army2)
-        assertEquals(true,res)
 
+        //Then
+        assertEquals(true,res)
 
     }
 

@@ -44,15 +44,17 @@ class WarriorTest {
 
     @Test
     @DisplayName("4. Fight")
-    fun `Knight is alive after fight, Knight v Warrior`(){
-        val zeus= Knight()
-        val godkiller= Warrior()
+    fun `Knight is alive after fight, Knight v Warrior`() {
+        // Given
+        val zeus = Knight()
+        val godkiller = Warrior()
 
-        fight(zeus,godkiller)
+        // When
+        fight(zeus, godkiller)
 
-        val res=zeus.isAlive
-
-        Assertions.assertEquals(true,res)
+        // Then
+        val res = zeus.isAlive
+        Assertions.assertEquals(true, res)
     }
 
     @Test
@@ -84,14 +86,18 @@ class WarriorTest {
     @Test
     @DisplayName("7. Fight")
     fun `Knight loses against warrior, after having previous fight`(){
+        //Given
         val unit1= Warrior()
         val unit2= Knight()
         val unit3= Warrior()
-        fight(unit1,unit2)
 
+        //When
+        fight(unit1,unit2)
         val res=fight(unit2,unit3)
 
+        //Then
         Assertions.assertEquals(false,res)
+
     }
 
 

@@ -6,7 +6,6 @@ fun fight(warrior1:Warrior,warrior2:Warrior):Boolean{
         defender.health-=attacker.attack
 
     }
-
     while (true){
 
         attack(warrior1,warrior2)

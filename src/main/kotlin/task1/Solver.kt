@@ -11,11 +11,8 @@ class Solver {
             i%3==0-> println("Fizz.")
             i%5==0-> println("Buzz.")
             else -> println(i)
-
             }
         }
-
-
     }
     fun reverse(string:String):String{
         return string.reversed()
@@ -32,9 +29,6 @@ class Solver {
                 break
             }
         }
-
         return missing
-
-
     }
 }
