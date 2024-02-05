@@ -26,7 +26,7 @@ class BankAccount(
 }
 
 fun main() {
-    val account = BankAccount("Rafael", "30", 210.0)
+    val account = BankAccount("30", "Rafael", 210.0)
     account.getBalance()
     account.deposit(300.0)
     account.withdraw(50.0)
