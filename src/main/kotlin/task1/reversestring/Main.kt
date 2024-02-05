@@ -7,7 +7,7 @@ package org.softserve.task1.reversestring
  * to join the list on a String using the .joinToString method.
  */
 fun reverseString(texto:String): String  {
-    val reversedList: MutableList<Char> = mutableListOf()
+    val reversedList: ArrayDeque<Char> = ArrayDeque()
     for (i in 0 until texto.length) {
         reversedList.addFirst(texto[i])
     }
@@ -17,7 +17,9 @@ fun reverseString(texto:String): String  {
 
 
 fun main() {
-    println(reverseString("Rey pirata"))
+    println(reverseString("Pirate King"))
+    // Pirate King
+    // gniK etariP 
 }
 
 

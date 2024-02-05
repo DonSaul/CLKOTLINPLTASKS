@@ -1,0 +1,39 @@
+Index: .idea/modules.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ProjectModuleManager\">\r\n    <modules>\r\n      <module fileurl=\"file://$PROJECT_DIR$/TasksSoftserve.iml\" filepath=\"$PROJECT_DIR$/TasksSoftserve.iml\" />\r\n    </modules>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/modules.xml b/.idea/modules.xml
+--- a/.idea/modules.xml	(revision ebdd0d3712ce997c33f18958e8f22b8198a72b75)
++++ b/.idea/modules.xml	(date 1706759834447)
+@@ -2,6 +2,9 @@
+ <project version="4">
+   <component name="ProjectModuleManager">
+     <modules>
++      <module fileurl="file://$PROJECT_DIR$/CLKOTLINPLTASKS.iml" filepath="$PROJECT_DIR$/CLKOTLINPLTASKS.iml" />
++      <module fileurl="file://$PROJECT_DIR$/.idea/modules/CLKOTLINPLTASKS.main.iml" filepath="$PROJECT_DIR$/.idea/modules/CLKOTLINPLTASKS.main.iml" />
++      <module fileurl="file://$PROJECT_DIR$/.idea/modules/CLKOTLINPLTASKS.test.iml" filepath="$PROJECT_DIR$/.idea/modules/CLKOTLINPLTASKS.test.iml" />
+       <module fileurl="file://$PROJECT_DIR$/TasksSoftserve.iml" filepath="$PROJECT_DIR$/TasksSoftserve.iml" />
+     </modules>
+   </component>
+Index: .idea/kotlinc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"Kotlin2JvmCompilerArguments\">\r\n    <option name=\"jvmTarget\" value=\"1.8\" />\r\n  </component>\r\n  <component name=\"KotlinCommonCompilerArguments\">\r\n    <option name=\"apiVersion\" value=\"1.9\" />\r\n    <option name=\"languageVersion\" value=\"1.9\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/kotlinc.xml b/.idea/kotlinc.xml
+--- a/.idea/kotlinc.xml	(revision ebdd0d3712ce997c33f18958e8f22b8198a72b75)
++++ b/.idea/kotlinc.xml	(date 1706759834791)
+@@ -7,4 +7,7 @@
+     <option name="apiVersion" value="1.9" />
+     <option name="languageVersion" value="1.9" />
+   </component>
++  <component name="KotlinJpsPluginSettings">
++    <option name="version" value="1.9.21" />
++  </component>
+ </project>
+\ No newline at end of file

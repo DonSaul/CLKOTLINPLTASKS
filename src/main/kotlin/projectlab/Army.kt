@@ -2,14 +2,12 @@ package org.softserve.projectlab
 /**
  * Clase Army que representa un ejército con objetos de la clase Warrior en sus filas, listos para la batalla.
  *
- * @property armyQueue Fila con objetos de la clase Warrior, vacía por defecto.
+ * @property armyQueue Fila vacia que contentrá objetos de la clase Warrior.
+ * @property armyIterator Iterador que recorre cada elemento de la fila
  *
- * @constructor Crea un nuevo ejército con una fila de guerreros especificada (o una fila vacía por defecto).
- * @param armyQueue La fila inicial de guerreros para el ejército.
  */
-class Army(
-    val armyQueue: ArrayDeque<Warrior> = ArrayDeque()) {
-
+class Army() {
+    private val armyQueue: ArrayDeque<Warrior> = ArrayDeque()
     private val armyIterator: Iterator<Warrior> = armyQueue.iterator()
 
     /**
@@ -20,7 +18,7 @@ class Army(
      */
     fun addUnits(cantidad: Int, unitCreator: () -> Warrior ) {
         repeat(cantidad) {
-            val unit: Warrior = unitCreator.invoke()
+            val unit: Warrior = unitCreator()
             this.armyQueue.addLast(unit)
         }
     }

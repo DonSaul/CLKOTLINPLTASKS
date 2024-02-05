@@ -3,7 +3,7 @@ package org.softserve.task2.bankaccount
 class BankAccount(
     val accountHolder: String,
     val accountNumber: String,
-    private var balance: Double,){
+    private var balance: Double){
 
     fun withdraw(amount: Double): Double  {
         if (this.balance >= amount) {
@@ -11,7 +11,7 @@ class BankAccount(
             println("Whitdrawn: $amount")
             return amount
         } else {
-            println("Not enough balance to withdraw $$amount")
+            println("Not enough money to withdraw $$amount")
             return 0.0
         }
     }
@@ -30,7 +30,11 @@ class BankAccount(
 fun main() {
     val myAccount: BankAccount = BankAccount("Saul", "42", 100.0)
     myAccount.getBalance()
+    // Output: Current balance: $100.0
     myAccount.withdraw(42.5)
+    // Output: Whitdrawn: 42.5
     myAccount.deposit(22.0)
+    // Output: Added $22.0
     myAccount.getBalance()
+    // Output: Current balance: $79.5
 }

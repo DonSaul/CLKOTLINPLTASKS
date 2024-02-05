@@ -7,8 +7,7 @@ import org.junit.jupiter.api.Test
 class FightTest {
 
     @Test
-    @DisplayName("1. Fight")
-    fun `Jon (caballero) debe ganar a Carl (guerrero)`() {
+    fun `Jon (knight) must defeat Carl (warrior)`() {
         // given
         val carl = Warrior()
         val jon = Knight()
@@ -100,7 +99,7 @@ class FightTest {
     }
 
     @Test
-    internal fun `When Defender fights against Rookie his health won't increase`() {
+    fun `When Defender fights against Rookie his health won't increase`() {
         val defender = Defender()
         val initialHealth = defender.health
 
@@ -190,6 +189,28 @@ class FightTest {
         assertEquals(false, res) {
             "No ganó army2"
         }
+    }
+    @Test
+    internal fun `Vampire vs Vampire`() {
+        val vampire = Vampire()
+
+        fight(vampire, Vampire())
+
+        assertEquals(4, vampire.health)
+    }
+
+    @Test
+    internal fun `Vampire vs Rookie`() {
+        class Rookie : Warrior() {
+            override val attack: Int
+                get() = 1
+        }
+        val vampire = Vampire()
+        val initialHealth = vampire.health
+
+        fight(vampire, Rookie())
+
+        assertEquals(initialHealth, vampire.health)
     }
 
 }

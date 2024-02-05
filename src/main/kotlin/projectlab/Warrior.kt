@@ -20,7 +20,11 @@ open class Warrior(
      */
     val isAlive: Boolean
         get() = health > 0
-    open fun makeDamage(damage: Int) {
+    open fun takeDamage(damage: Int): Int {
         health -= damage
+        return damage
+    }
+    open fun attack(target: Warrior) {
+        target.takeDamage(attack)
     }
 }

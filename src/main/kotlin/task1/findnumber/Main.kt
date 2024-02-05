@@ -46,10 +46,14 @@ fun missingNumbersFinder(inputList: List<Int>): MutableList<Int> {
 
 fun main() {
     val listOfNumbers: List<Int> = listOf(3,0,1,4,5,8,15)
-
     val missingNumber: Int = missingFirstNumberFinder(listOfNumbers)
     println("The first missing number is: $missingNumber")
+    // Output: Sorted list: [0, 1, 3, 4, 5, 8, 15]
+    // Output: The first missing number is: 2
 
     val missingNumbersList: MutableList<Int> = missingNumbersFinder(listOfNumbers)
     println("The missing number or numbers are: $missingNumbersList")
+    // Sorted list: [0, 1, 3, 4, 5, 8, 15]
+    // The missing number or numbers are: [2, 6, 7, 9, 10, 11, 12, 13, 14]
+
 }

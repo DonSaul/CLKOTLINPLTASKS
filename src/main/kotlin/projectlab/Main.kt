@@ -10,9 +10,9 @@ package org.softserve.projectlab
 fun fight(warrior1: Warrior,
           warrior2: Warrior): Boolean {
     while (warrior1.isAlive && warrior2.isAlive) {
-        warrior2.makeDamage(warrior1.attack)
+        warrior1.attack(warrior2)
         if (warrior2.isAlive) {
-            warrior1.makeDamage(warrior2.attack)
+            warrior2.attack(warrior1)
         }
     }
     return warrior1.isAlive
@@ -33,7 +33,7 @@ fun fight(warrior1: Warrior,
  *
  */
 fun fight(army1: Army,
-          army2: Army): Any {
+          army2: Army): Boolean {
     var warrior1: Warrior = army1.nextFighter()
     var warrior2: Warrior = army2.nextFighter()
 
@@ -59,6 +59,10 @@ fun main() {
     val mike = Knight()
     val rog = Warrior()
     val lancelot = Defender()
+    val eric = Vampire()
+    val adam = Vampire()
+    val richard = Defender()
+    val ogre = Warrior()
 
     check(fight(chuck, bruce) == true)
     check(fight(dave, carl) == false)
@@ -70,19 +74,30 @@ fun main() {
     check(carl.isAlive == false)
     check(fight(bob, mike) == false)
     check(fight(lancelot, rog) == true)
+    check(fight(eric, richard) == false)
+    check(fight(ogre, adam) == true)
 
-    val myArmy = Army()
-    myArmy.addUnits(1) { Defender() }
+    val myArmy = Army().apply {
+        addUnits(2) { Defender() }
+        addUnits(2) { Vampire() }
+        addUnits(1) { Warrior() }
+    }
 
-    val enemyArmy = Army()
-    enemyArmy.addUnits(2) { Warrior() }
+    val enemyArmy = Army().apply {
+        addUnits(2) { Warrior() }
+        addUnits(2) { Defender() }
+        addUnits(3) { Vampire() }
+    }
 
-    val army3 = Army()
-    army3.addUnits(1) { Warrior() }
-    army3.addUnits(1) { Defender() }
+    val army3 = Army().apply {
+        addUnits(1) { Warrior() }
+        addUnits(4) { Defender() }
+    }
 
-    val army4 = Army()
-    army4.addUnits(2) { Warrior() }
+    val army4 = Army().apply {
+        addUnits(3) { Vampire() }
+        addUnits(2) { Warrior() }
+    }
 
     check(fight(myArmy, enemyArmy) == false)
     check(fight(army3, army4) == true)

@@ -64,8 +64,7 @@ class BattleArmyTest {
     }
 
     @Test
-    @DisplayName("5. Battle")
-    fun `Army1 debe ganar a Army2 p2`() {
+    fun `Army1 must defeat Army2`() {
         // given
         val army1 = Army()
         val army2 = Army()
@@ -90,5 +89,82 @@ class BattleArmyTest {
         // then
         assertEquals(true, res)
     }
+    @Test
+    fun `Battle 11`() {
+        // given
+        val army1 = Army().apply {
+            addUnits(5) { Defender() }
+            addUnits(6) { Vampire() }
+            addUnits(7) { Warrior() }
+        }
+        val army2 = Army().apply {
+            addUnits(6) { Warrior() }
+            addUnits(6) { Defender() }
+            addUnits(6) { Vampire() }
+        }
+        // when
+        val res = fight(army1, army2)
+        // then
+        assertEquals(false, res)
+    }
+
+    @Test
+    fun `Battle 12`() {
+        // given
+        val army1 = Army().apply {
+            addUnits(2) { Defender() }
+            addUnits(3) { Vampire() }
+            addUnits(4) { Warrior() }
+        }
+        val army2 = Army().apply {
+            addUnits(4) { Warrior() }
+            addUnits(4) { Defender() }
+            addUnits(3) { Vampire() }
+        }
+        // when
+        val res = fight(army1, army2)
+        // then
+        assertEquals(false, res)
+    }
+
+    @Test
+    fun `Battle 13`() {
+        // given
+        val army1 = Army().apply {
+            addUnits(11) { Defender() }
+            addUnits(3) { Vampire() }
+            addUnits(4) { Warrior() }
+        }
+        val army2 = Army().apply {
+            addUnits(4) { Warrior() }
+            addUnits(4) { Defender() }
+            addUnits(13) { Vampire() }
+        }
+        // when
+        val res = fight(army1, army2)
+        // then
+        assertEquals(true, res)
+    }
+
+    @Test
+    fun `Battle 14`() {
+        // given
+        val army1 = Army().apply {
+            addUnits(9) { Defender() }
+            addUnits(3) { Vampire() }
+            addUnits(8) { Warrior() }
+        }
+        val army2 = Army().apply {
+            addUnits(4) { Warrior() }
+            addUnits(4) { Defender() }
+            addUnits(13) { Vampire() }
+        }
+        // when
+        val res = fight(army1, army2)
+        // then
+        assertEquals(true, res)
+    }
+
+
 
 }

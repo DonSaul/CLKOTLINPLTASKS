@@ -27,5 +27,5 @@ fun fizzBuzz(max:Int) {
 }
 
 fun main() {
-    fizzBuzz(20)
+    fizzBuzz(10)
 }
