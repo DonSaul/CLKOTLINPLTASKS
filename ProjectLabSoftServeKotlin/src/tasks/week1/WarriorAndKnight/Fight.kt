@@ -20,4 +20,5 @@ fun fight(warrior: Fighter, knight: Fighter): Boolean {
         }
     }
     return warrior.isAlive
+
 }

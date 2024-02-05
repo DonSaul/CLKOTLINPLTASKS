@@ -5,6 +5,7 @@
 ../out
 ../.gitignore
 ../.gradle
+../.out
 
 build/
 !gradle/wrapper/gradle-wrapper.jar

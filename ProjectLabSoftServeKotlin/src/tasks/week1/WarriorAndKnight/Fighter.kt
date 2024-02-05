@@ -7,7 +7,5 @@ open class Fighter {
     val isAlive: Boolean
         get() = health > 0
 
-    fun damage(damage:Int) {
-        health -= damage
-    }
+    fun damage(damage:Int) { health -= damage }
 }
