@@ -20,6 +20,29 @@ class WarriorTest{
     }
 
 
+    @Test
+    @DisplayName("x. Vampire vs Vampire")
+    internal fun `Vampire vs Vampire`() {
+        val vampire = Vampire()
+
+        fight(vampire, Vampire())
+
+        assertEquals(4, vampire.health)
+    }
+
+    @Test
+    @DisplayName("1. Vampire vs Rookie")
+    internal fun `Vampire vs Rookie`() {
+        class Rookie : Warrior(attack = 1)
+        val vampire = Vampire()
+        val initialHealth = vampire.health
+
+        fight(vampire, Rookie())
+
+        assertEquals(initialHealth, vampire.health)
+    }
+
+
 
 
 
