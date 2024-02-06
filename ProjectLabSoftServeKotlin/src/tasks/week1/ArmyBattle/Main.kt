@@ -1,5 +1,7 @@
 package tasks.week1.ArmyBattle
 
+import java.sql.DriverManager.println
+
 fun main() {
     val legolas = Dwarfs()
     val gimli = Dwarfs()

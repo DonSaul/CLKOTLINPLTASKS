@@ -1,5 +1,7 @@
 package tasks.week1.ArmyBattle
 
+import java.sql.DriverManager.println
+
 fun fight(army1: Army, army2: Army): Boolean {
         println("===== Battle Start =====")
         println("Army 1 vs Army 2")
