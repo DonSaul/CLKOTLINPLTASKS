@@ -1,11 +1,14 @@
 # Default ignored files
 /shelf/
-/workspace.xml
-../.idea
-../out
-../.gitignore
-../.gradle
-../.out
+/.idea/workspace.xml
+/.idea
+gradle
+.gradle
+gradlew
+gradlew.bat
+settings.gradle.kts
+SoftserveProjectLab/build.gradle.kts
+SoftserveProjectLab/build
 
 build/
 !gradle/wrapper/gradle-wrapper.jar
