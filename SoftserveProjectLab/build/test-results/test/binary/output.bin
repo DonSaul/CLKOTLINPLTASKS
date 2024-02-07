@@ -1,516 +1,0 @@
---Knight Vs Warrior--
-1Knight health: 30 || Level attack of Knight: 10
-2Warrior health: 50 || Level attack of Warrior: 3
-.--------------------------------------------
--Knight attacks Warrior!
-   Knight health: 30
-   Warrior health: 40
-.--------------------------------------------
--Warrior attacks Knight!
-   Knight health: 27
-   Warrior health: 40
-.--------------------------------------------
--Knight attacks Warrior!
-   Knight health: 27
-   Warrior health: 30
-.--------------------------------------------
--Warrior attacks Knight!
-   Knight health: 24
-   Warrior health: 30
-.--------------------------------------------
--Knight attacks Warrior!
-   Knight health: 24
-   Warrior health: 20
-.--------------------------------------------
--Warrior attacks Knight!
-   Knight health: 21
-   Warrior health: 20
-.--------------------------------------------
--Knight attacks Warrior!
-   Knight health: 21
-   Warrior health: 10
-.--------------------------------------------
--Warrior attacks Knight!
-   Knight health: 18
-   Warrior health: 10
-.--------------------------------------------
--Knight attacks Warrior!
-   Knight health: 18
-   Warrior health: 0
---Knight Vs Warrior--
-1Knight health: 30 || Level attack of Knight: 10
-2Warrior health: 50 || Level attack of Warrior: 3
-.--------------------------------------------
--Knight attacks Warrior!
-   Knight health: 30
-   Warrior health: 40
-.--------------------------------------------
--Warrior attacks Knight!
-   Knight health: 27
-   Warrior health: 40
-.--------------------------------------------
--Knight attacks Warrior!
-   Knight health: 27
-   Warrior health: 30
-.--------------------------------------------
--Warrior attacks Knight!
-   Knight health: 24
-   Warrior health: 30
-.--------------------------------------------
--Knight attacks Warrior!
-   Knight health: 24
-   Warrior health: 20
-.--------------------------------------------
--Warrior attacks Knight!
-   Knight health: 21
-   Warrior health: 20
-.--------------------------------------------
--Knight attacks Warrior!
-   Knight health: 21
-   Warrior health: 10
-.--------------------------------------------
--Warrior attacks Knight!
-   Knight health: 18
-   Warrior health: 10
-.--------------------------------------------
--Knight attacks Warrior!
-   Knight health: 18
-   Warrior health: 0
---Warrior Vs Warrior--
-2Warrior health: 50 || Level attack of Warrior: 3
-2Warrior health: 50 || Level attack of Warrior: 3
-.--------------------------------------------
--Warrior attacks Warrior!
-   Warrior health: 50
-   Warrior health: 47
-.--------------------------------------------
--Warrior attacks Warrior!
-   Warrior health: 47
-   Warrior health: 47
-.--------------------------------------------
--Warrior attacks Warrior!
-   Warrior health: 47
-   Warrior health: 44
-.--------------------------------------------
--Warrior attacks Warrior!
-   Warrior health: 44
-   Warrior health: 44
-.--------------------------------------------
--Warrior attacks Warrior!
-   Warrior health: 44
-   Warrior health: 41
-.--------------------------------------------
--Warrior attacks Warrior!
-   Warrior health: 41
-   Warrior health: 41
-.--------------------------------------------
--Warrior attacks Warrior!
-   Warrior health: 41
-   Warrior health: 38
-.--------------------------------------------
--Warrior attacks Warrior!
-   Warrior health: 38
-   Warrior health: 38
-.--------------------------------------------
--Warrior attacks Warrior!
-   Warrior health: 38
-   Warrior health: 35
-.--------------------------------------------
--Warrior attacks Warrior!
-   Warrior health: 35
-   Warrior health: 35
-.--------------------------------------------
--Warrior attacks Warrior!
-   Warrior health: 35
-   Warrior health: 32
-.--------------------------------------------
--Warrior attacks Warrior!
-   Warrior health: 32
-   Warrior health: 32
-.--------------------------------------------
--Warrior attacks Warrior!
-   Warrior health: 32
-   Warrior health: 29
-.--------------------------------------------
--Warrior attacks Warrior!
-   Warrior health: 29
-   Warrior health: 29
-.--------------------------------------------
--Warrior attacks Warrior!
-   Warrior health: 29
-   Warrior health: 26
-.--------------------------------------------
--Warrior attacks Warrior!
-   Warrior health: 26
-   Warrior health: 26
-.--------------------------------------------
--Warrior attacks Warrior!
-   Warrior health: 26
-   Warrior health: 23
-.--------------------------------------------
--Warrior attacks Warrior!
-   Warrior health: 23
-   Warrior health: 23
-.--------------------------------------------
--Warrior attacks Warrior!
-   Warrior health: 23
-   Warrior health: 20
-.--------------------------------------------
--Warrior attacks Warrior!
-   Warrior health: 20
-   Warrior health: 20
-.--------------------------------------------
--Warrior attacks Warrior!
-   Warrior health: 20
-   Warrior health: 17
-.--------------------------------------------
--Warrior attacks Warrior!
-   Warrior health: 17
-   Warrior health: 17
-.--------------------------------------------
--Warrior attacks Warrior!
-   Warrior health: 17
-   Warrior health: 14
-.--------------------------------------------
--Warrior attacks Warrior!
-   Warrior health: 14
-   Warrior health: 14
-.--------------------------------------------
--Warrior attacks Warrior!
-   Warrior health: 14
-   Warrior health: 11
-.--------------------------------------------
--Warrior attacks Warrior!
-   Warrior health: 11
-   Warrior health: 11
-.--------------------------------------------
--Warrior attacks Warrior!
-   Warrior health: 11
-   Warrior health: 8
-.--------------------------------------------
--Warrior attacks Warrior!
-   Warrior health: 8
-   Warrior health: 8
-.--------------------------------------------
--Warrior attacks Warrior!
-   Warrior health: 8
-   Warrior health: 5
-.--------------------------------------------
--Warrior attacks Warrior!
-   Warrior health: 5
-   Warrior health: 5
-.--------------------------------------------
--Warrior attacks Warrior!
-   Warrior health: 5
-   Warrior health: 2
-.--------------------------------------------
--Warrior attacks Warrior!
-   Warrior health: 2
-   Warrior health: 2
-.--------------------------------------------
--Warrior attacks Warrior!
-   Warrior health: 2
-   Warrior health: -1
---Warrior Vs Knight--
-2Warrior health: 50 || Level attack of Warrior: 3
-1Knight health: 30 || Level attack of Knight: 10
-.--------------------------------------------
--Warrior attacks Knight!
-   Warrior health: 50
-   Knight health: 27
-.--------------------------------------------
--Knight attacks Warrior!
-   Warrior health: 40
-   Knight health: 27
-.--------------------------------------------
--Warrior attacks Knight!
-   Warrior health: 40
-   Knight health: 24
-.--------------------------------------------
--Knight attacks Warrior!
-   Warrior health: 30
-   Knight health: 24
-.--------------------------------------------
--Warrior attacks Knight!
-   Warrior health: 30
-   Knight health: 21
-.--------------------------------------------
--Knight attacks Warrior!
-   Warrior health: 20
-   Knight health: 21
-.--------------------------------------------
--Warrior attacks Knight!
-   Warrior health: 20
-   Knight health: 18
-.--------------------------------------------
--Knight attacks Warrior!
-   Warrior health: 10
-   Knight health: 18
-.--------------------------------------------
--Warrior attacks Knight!
-   Warrior health: 10
-   Knight health: 15
-.--------------------------------------------
--Knight attacks Warrior!
-   Warrior health: 0
-   Knight health: 15
---Warrior Vs Knight--
-2Warrior health: 50 || Level attack of Warrior: 3
-1Knight health: 30 || Level attack of Knight: 10
-.--------------------------------------------
--Warrior attacks Knight!
-   Warrior health: 50
-   Knight health: 27
-.--------------------------------------------
--Knight attacks Warrior!
-   Warrior health: 40
-   Knight health: 27
-.--------------------------------------------
--Warrior attacks Knight!
-   Warrior health: 40
-   Knight health: 24
-.--------------------------------------------
--Knight attacks Warrior!
-   Warrior health: 30
-   Knight health: 24
-.--------------------------------------------
--Warrior attacks Knight!
-   Warrior health: 30
-   Knight health: 21
-.--------------------------------------------
--Knight attacks Warrior!
-   Warrior health: 20
-   Knight health: 21
-.--------------------------------------------
--Warrior attacks Knight!
-   Warrior health: 20
-   Knight health: 18
-.--------------------------------------------
--Knight attacks Warrior!
-   Warrior health: 10
-   Knight health: 18
-.--------------------------------------------
--Warrior attacks Knight!
-   Warrior health: 10
-   Knight health: 15
-.--------------------------------------------
--Knight attacks Warrior!
-   Warrior health: 0
-   Knight health: 15
---Knight Vs Warrior--
-1Knight health: 15 || Level attack of Knight: 10
-2Warrior health: 50 || Level attack of Warrior: 3
-.--------------------------------------------
--Knight attacks Warrior!
-   Knight health: 15
-   Warrior health: 40
-.--------------------------------------------
--Warrior attacks Knight!
-   Knight health: 12
-   Warrior health: 40
-.--------------------------------------------
--Knight attacks Warrior!
-   Knight health: 12
-   Warrior health: 30
-.--------------------------------------------
--Warrior attacks Knight!
-   Knight health: 9
-   Warrior health: 30
-.--------------------------------------------
--Knight attacks Warrior!
-   Knight health: 9
-   Warrior health: 20
-.--------------------------------------------
--Warrior attacks Knight!
-   Knight health: 6
-   Warrior health: 20
-.--------------------------------------------
--Knight attacks Warrior!
-   Knight health: 6
-   Warrior health: 10
-.--------------------------------------------
--Warrior attacks Knight!
-   Knight health: 3
-   Warrior health: 10
-.--------------------------------------------
--Knight attacks Warrior!
-   Knight health: 3
-   Warrior health: 0
---Warrior Vs Knight--
-2Warrior health: 50 || Level attack of Warrior: 3
-1Knight health: 30 || Level attack of Knight: 10
-.--------------------------------------------
--Warrior attacks Knight!
-   Warrior health: 50
-   Knight health: 27
-.--------------------------------------------
--Knight attacks Warrior!
-   Warrior health: 40
-   Knight health: 27
-.--------------------------------------------
--Warrior attacks Knight!
-   Warrior health: 40
-   Knight health: 24
-.--------------------------------------------
--Knight attacks Warrior!
-   Warrior health: 30
-   Knight health: 24
-.--------------------------------------------
--Warrior attacks Knight!
-   Warrior health: 30
-   Knight health: 21
-.--------------------------------------------
--Knight attacks Warrior!
-   Warrior health: 20
-   Knight health: 21
-.--------------------------------------------
--Warrior attacks Knight!
-   Warrior health: 20
-   Knight health: 18
-.--------------------------------------------
--Knight attacks Warrior!
-   Warrior health: 10
-   Knight health: 18
-.--------------------------------------------
--Warrior attacks Knight!
-   Warrior health: 10
-   Knight health: 15
-.--------------------------------------------
--Knight attacks Warrior!
-   Warrior health: 0
-   Knight health: 15
- --Warrior Vs Warrior--
- 2Warrior health: 50 || Level attack of Warrior: 3
- 2Warrior health: 50 || Level attack of Warrior: 3
- .--------------------------------------------
- -Warrior attacks Warrior!
-    Warrior health: 50
-    Warrior health: 47
- .--------------------------------------------
- -Warrior attacks Warrior!
-    Warrior health: 47
-    Warrior health: 47
- .--------------------------------------------
- -Warrior attacks Warrior!
-    Warrior health: 47
-    Warrior health: 44
- .--------------------------------------------
- -Warrior attacks Warrior!
-    Warrior health: 44
-    Warrior health: 44
- .--------------------------------------------
- -Warrior attacks Warrior!
-    Warrior health: 44
-    Warrior health: 41
- .--------------------------------------------
- -Warrior attacks Warrior!
-    Warrior health: 41
-    Warrior health: 41
- .--------------------------------------------
- -Warrior attacks Warrior!
-    Warrior health: 41
-    Warrior health: 38
- .--------------------------------------------
- -Warrior attacks Warrior!
-    Warrior health: 38
-    Warrior health: 38
- .--------------------------------------------
- -Warrior attacks Warrior!
-    Warrior health: 38
-    Warrior health: 35
- .--------------------------------------------
- -Warrior attacks Warrior!
-    Warrior health: 35
-    Warrior health: 35
- .--------------------------------------------
- -Warrior attacks Warrior!
-    Warrior health: 35
-    Warrior health: 32
- .--------------------------------------------
- -Warrior attacks Warrior!
-    Warrior health: 32
-    Warrior health: 32
- .--------------------------------------------
- -Warrior attacks Warrior!
-    Warrior health: 32
-    Warrior health: 29
- .--------------------------------------------
- -Warrior attacks Warrior!
-    Warrior health: 29
-    Warrior health: 29
- .--------------------------------------------
- -Warrior attacks Warrior!
-    Warrior health: 29
-    Warrior health: 26
- .--------------------------------------------
- -Warrior attacks Warrior!
-    Warrior health: 26
-    Warrior health: 26
- .--------------------------------------------
- -Warrior attacks Warrior!
-    Warrior health: 26
-    Warrior health: 23
- .--------------------------------------------
- -Warrior attacks Warrior!
-    Warrior health: 23
-    Warrior health: 23
- .--------------------------------------------
- -Warrior attacks Warrior!
-    Warrior health: 23
-    Warrior health: 20
- .--------------------------------------------
- -Warrior attacks Warrior!
-    Warrior health: 20
-    Warrior health: 20
- .--------------------------------------------
- -Warrior attacks Warrior!
-    Warrior health: 20
-    Warrior health: 17
- .--------------------------------------------
- -Warrior attacks Warrior!
-    Warrior health: 17
-    Warrior health: 17
- .--------------------------------------------
- -Warrior attacks Warrior!
-    Warrior health: 17
-    Warrior health: 14
- .--------------------------------------------
- -Warrior attacks Warrior!
-    Warrior health: 14
-    Warrior health: 14
- .--------------------------------------------
- -Warrior attacks Warrior!
-    Warrior health: 14
-    Warrior health: 11
- .--------------------------------------------
- -Warrior attacks Warrior!
-    Warrior health: 11
-    Warrior health: 11
- .--------------------------------------------
- -Warrior attacks Warrior!
-    Warrior health: 11
-    Warrior health: 8
- .--------------------------------------------
- -Warrior attacks Warrior!
-    Warrior health: 8
-    Warrior health: 8
- .--------------------------------------------
- -Warrior attacks Warrior!
-    Warrior health: 8
-    Warrior health: 5
- .--------------------------------------------
- -Warrior attacks Warrior!
-    Warrior health: 5
-    Warrior health: 5
- .--------------------------------------------
- -Warrior attacks Warrior!
-    Warrior health: 5
-    Warrior health: 2
- .--------------------------------------------
- -Warrior attacks Warrior!
-    Warrior health: 2
-    Warrior health: 2
- .--------------------------------------------
- -Warrior attacks Warrior!
-    Warrior health: 2
-    Warrior health: -1

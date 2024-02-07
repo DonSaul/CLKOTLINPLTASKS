@@ -1,7 +1,6 @@
 package tasks.week1.ArmyBattle
 
 import org.example.tasks.week1.ArmyBattle.*
-import org.example.tasks.week1.ArmyBattle.Army
 import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.Test
 
@@ -149,33 +148,6 @@ class ArmyBattleTest {
 
 
     @Test
-    fun `Army 1 should be defeated`() {
-        val army1 = Army()
-        army1.addUnits(2) { Dwarfs() }
-        val army2 = Army()
-        army2.addUnits(3) { Dwarfs() }
-        assertFalse(fight(army1, army2))
-    }
-
-    @Test
-    fun `Army 1 should be defeated against army2`() {
-        val army1 = Army()
-        army1.addUnits(5) { Dwarfs() }
-        val army2 = Army()
-        army2.addUnits(7) { Dwarfs() }
-        assertFalse(fight(army1, army2))
-    }
-
-    @Test
-    fun `Army 1 should win against army2`() {
-        val army1 = Army()
-        army1.addUnits(20) { Dwarfs() }
-        val army2 = Army()
-        army2.addUnits(21) { Dwarfs() }
-        assertTrue(fight(army1, army2))
-    }
-
-    @Test
     fun `Army 1 should win 10 army dwarfs `() {
         val army1 = Army()
         army1.addUnits(10) { Dwarfs() }
@@ -192,6 +164,7 @@ class ArmyBattleTest {
         army2.addUnits(7) { Dwarfs() }
         assertTrue(fight(army1, army2))
     }
+
     @Test
     fun `Army 1 should win 11 changing units`() {
         val army1 = Army()
@@ -202,38 +175,98 @@ class ArmyBattleTest {
         army2.addUnits(4) { Dwarfs() }
         assertTrue(fight(army1, army2))
     }
+
     @Test
-    fun `Army 1 should win after change units and fight against army 2` () {
+    fun `Army 1 should win after change units and fight against army 2`() {
         val army1 = Army()
-        army1.addUnits(5) {Defender()}
-        army1.addUnits(20) {Dwarfs()}
+        army1.addUnits(5) { Defender() }
+        army1.addUnits(20) { Dwarfs() }
         val army2 = Army()
-        army2.addUnits(21) {Dwarfs()}
-        army1.addUnits(4) {Defender()}
+        army2.addUnits(21) { Dwarfs() }
+        army1.addUnits(4) { Defender() }
         assertTrue(fight(army1, army2))
     }
 
     @Test
-    fun `Army1 should win after change trooper and fight` () {
+    fun `Army1 should win after change trooper and fight`() {
         val army1 = Army()
         val army2 = Army()
-        army1.addUnits(10) {Dwarfs()}
-        army1.addUnits(5) {Defender()}
-        army2.addUnits(5) {Dwarfs()}
-        army1.addUnits(10) {Defender()}
+        army1.addUnits(10) { Dwarfs() }
+        army1.addUnits(5) { Defender() }
+        army2.addUnits(5) { Dwarfs() }
+        army1.addUnits(10) { Defender() }
         assertTrue(fight(army1, army2))
     }
 
-
     @Test
-    fun `army1 should be defeated against army2` () {
+    fun `army1 should be defeated against army2`() {
         val army1 = Army()
         val army2 = Army()
-        army1.addUnits(2) {Defender()}
-        army1.addUnits(1) {Dwarfs()}
-        army1.addUnits(1) {Defender()}
-        army2.addUnits(50) {Dwarfs()}
+        army1.addUnits(2) { Defender() }
+        army1.addUnits(1) { Dwarfs() }
+        army1.addUnits(1) { Defender() }
+        army2.addUnits(50) { Dwarfs() }
         assertFalse(fight(army1, army2))
     }
 
+    @Test
+    fun `11army 1 should be defeated by army2`() {
+        val army1 = Army()
+        val army2 = Army()
+
+        army1.addUnits(5) { Defender() }
+        army1.addUnits(6) { Vampire() }
+        army1.addUnits(7) { Dwarfs() }
+
+        army2.addUnits(6) { Dwarfs() }
+        army2.addUnits(6) { Defender() }
+        army2.addUnits(6) { Vampire() }
+        assertFalse(fight(army1, army2))
+    }
+
+
+    @Test
+    fun `12 army1 should be defeated army2`() {
+        val army1 = Army()
+        val army2 = Army()
+
+        army1.addUnits(2) { Defender() }
+        army1.addUnits(3) { Vampire() }
+        army1.addUnits(4) { Dwarfs() }
+
+        army2.addUnits(4) { Dwarfs() }
+        army2.addUnits(4) { Defender() }
+        army2.addUnits(3) { Vampire() }
+        assertFalse(fight(army1, army2))
+    }
+
+    @Test
+    fun `13Army 1 should win army2`() {
+        val army1 = Army()
+        val army2 = Army()
+
+        army1.addUnits(11) { Defender() }
+        army1.addUnits(3) { Vampire() }
+        army1.addUnits(4) { Dwarfs() }
+
+        army2.addUnits(4) { Dwarfs() }
+        army2.addUnits(4) { Defender() }
+        army2.addUnits(13) { Vampire() }
+        assertTrue(fight(army1, army2))
+    }
+    
+    @Test
+    fun `army1 should win army2`() {
+        val army1 = Army()
+        val army2 = Army()
+
+        army1.addUnits(9) {Defender()}
+        army1.addUnits(3) {Vampire()}
+        army1.addUnits(8) {Dwarfs()}
+
+        army2.addUnits(4) {Dwarfs()}
+        army2.addUnits(4) {Defender()}
+        army2.addUnits(13) {Vampire()}
+        assertTrue(fight(army1, army2))
+    }
 }
