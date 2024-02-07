@@ -165,6 +165,64 @@ class BattleArmyTest {
         assertEquals(true, res)
     }
 
+    @Test
+    fun `Battle 15`() {
+        // given
+        val army1 = Army().apply {
+            addUnits(5) { Lancer() }
+            addUnits(3) { Vampire() }
+            addUnits(4) { Warrior() }
+            addUnits(2) { Defender() }
+        }
+        val army2 = Army().apply {
+            addUnits(4) { Warrior() }
+            addUnits(4) { Defender() }
+            addUnits(6) { Vampire() }
+            addUnits(5) { Lancer() }
+        }
+        // when
+        val res = fight(army1, army2)
+        // then
+        assertEquals(false, res)
+    }
+
+    @Test
+    fun `Battle 16`() {
+        // given
+        val army1 = Army().apply {
+            addUnits(7) { Lancer() }
+            addUnits(3) { Vampire() }
+            addUnits(4) { Warrior() }
+            addUnits(2) { Defender() }
+        }
+        val army2 = Army().apply {
+            addUnits(4) { Warrior() }
+            addUnits(4) { Defender() }
+            addUnits(6) { Vampire() }
+            addUnits(4) { Lancer() }
+        }
+        // when
+        val res = fight(army1, army2)
+        // then
+        assertEquals(true, res)
+    }
+
+    @Test
+    fun `Battle 17`() {
+        // given
+        val armyWarrior = Army().apply {
+            addUnits(2) { Warrior() }
+        }
+        val armyLancer = Army().apply {
+            addUnits(1) { Lancer() }
+            addUnits(1) { Warrior() }
+        }
+        // when
+        val res = fight(armyWarrior, armyLancer)
+        // then
+        assertEquals(false, res)
+    }
+
 
 
 }

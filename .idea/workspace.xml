@@ -5,20 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="551b0ff0-60c1-4aaf-bfc6-d3b8447e5119" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/projectlab/Army.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/projectlab/Army.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/projectlab/Defender.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/projectlab/Defender.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/projectlab/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/projectlab/Main.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/projectlab/Rockie.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/projectlab/Rockie.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/projectlab/Warrior.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/projectlab/Warrior.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/task1/findnumber/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/task1/findnumber/Main.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/task1/fizzbuzz/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/task1/fizzbuzz/Main.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/task1/reversestring/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/task1/reversestring/Main.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/task2/bankaccount/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/task2/bankaccount/Main.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/task2/charactercreation/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/task2/charactercreation/Main.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/kotlin/projectlab/BattleArmyTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/projectlab/BattleArmyTest.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/kotlin/projectlab/FightTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/projectlab/FightTest.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,6 +71,10 @@
     "Gradle.FightTest.Jon (caballero) debe ganar a Carl (guerrero).executor": "Run",
     "Gradle.FightTest.executor": "Run",
     "JUnit.BattleArmyTest.Army1 must defeat Army2.executor": "Run",
+    "JUnit.BattleArmyTest.Battle 11.executor": "Run",
+    "JUnit.BattleArmyTest.Battle 14.executor": "Run",
+    "JUnit.BattleArmyTest.Battle 15.executor": "Run",
+    "JUnit.BattleArmyTest.executor": "Run",
     "JUnit.FightTest.Jon (caballero) debe ganar a Carl (guerrero).executor": "Run",
     "JUnit.FightTest.Jon (knight) must defeat Carl (warrior).executor": "Run",
     "JUnit.FightTest.Vampire vs Rookie$CLKOTLINPLTASKS_test.executor": "Run",
@@ -93,11 +87,12 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "esteban",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/Kaito/SoftServe Kotlin/CLKOTLINPLTASKS",
     "onboarding.tips.debug.path": "D:/Kaito/SoftServe Kotlin/CLKOTLINPLTASKS/src/main/kotlin/Main.kt",
     "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.BattleArmyTest">
+  <component name="RunManager" selected="Kotlin.MainKt">
     <configuration name="BattleArmyTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CLKOTLINPLTASKS.test" />
       <extension name="coverage">
@@ -129,7 +124,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FightTest.Vampire vs Rookie$CLKOTLINPLTASKS_test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BattleArmyTest.Battle 14" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CLKOTLINPLTASKS.test" />
       <extension name="coverage">
         <pattern>
@@ -138,14 +133,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.softserve.projectlab" />
-      <option name="MAIN_CLASS_NAME" value="org.softserve.projectlab.FightTest" />
-      <option name="METHOD_NAME" value="Vampire vs Rookie$CLKOTLINPLTASKS_test" />
+      <option name="MAIN_CLASS_NAME" value="org.softserve.projectlab.BattleArmyTest" />
+      <option name="METHOD_NAME" value="Battle 14" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FightTest.Vampire vs Vampire$CLKOTLINPLTASKS_test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BattleArmyTest.Battle 15" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CLKOTLINPLTASKS.test" />
       <extension name="coverage">
         <pattern>
@@ -154,8 +149,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.softserve.projectlab" />
-      <option name="MAIN_CLASS_NAME" value="org.softserve.projectlab.FightTest" />
-      <option name="METHOD_NAME" value="Vampire vs Vampire$CLKOTLINPLTASKS_test" />
+      <option name="MAIN_CLASS_NAME" value="org.softserve.projectlab.BattleArmyTest" />
+      <option name="METHOD_NAME" value="Battle 15" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -170,11 +165,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.BattleArmyTest" />
-        <item itemvalue="JUnit.BattleArmyTest.Battle 11" />
-        <item itemvalue="JUnit.FightTest.Vampire vs Rookie$CLKOTLINPLTASKS_test" />
-        <item itemvalue="JUnit.FightTest.Vampire vs Vampire$CLKOTLINPLTASKS_test" />
         <item itemvalue="Kotlin.MainKt" />
+        <item itemvalue="JUnit.BattleArmyTest" />
+        <item itemvalue="JUnit.BattleArmyTest.Battle 15" />
+        <item itemvalue="JUnit.BattleArmyTest.Battle 14" />
+        <item itemvalue="JUnit.BattleArmyTest.Battle 11" />
       </list>
     </recent_temporary>
   </component>

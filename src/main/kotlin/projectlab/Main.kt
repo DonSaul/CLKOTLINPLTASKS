@@ -34,72 +34,75 @@ fun fight(warrior1: Warrior,
  */
 fun fight(army1: Army,
           army2: Army): Boolean {
-    var warrior1: Warrior = army1.nextFighter()
-    var warrior2: Warrior = army2.nextFighter()
+    var warrior1: Warrior = army1.getUnit()!!
+    var warrior2: Warrior = army2.getUnit()!!
 
     while (army1.hasFighters() && army2.hasFighters() ) {
         val warrior1Win: Boolean = fight(warrior1, warrior2)
         if (warrior1Win && army2.hasFighters()) {
-            warrior2 = army2.nextFighter()
+            warrior2 = army2.getUnit()!!
         } else if (!warrior1Win && army1.hasFighters()){
-            warrior1 = army1.nextFighter()
+            warrior1 = army1.getUnit()!!
         }
     }
     return army1.hasFighters()
 }
 
 fun main() {
-    // smoke test
-    val chuck = Warrior()
-    val bruce = Warrior()
-    val carl = Knight()
-    val dave = Warrior()
-    val mark = Warrior()
-    val bob = Defender()
-    val mike = Knight()
-    val rog = Warrior()
-    val lancelot = Defender()
-    val eric = Vampire()
-    val adam = Vampire()
-    val richard = Defender()
-    val ogre = Warrior()
+    val chuck = Warrior();
+    val bruce = Warrior();
+    val carl = Knight();
+    val dave = Warrior();
+    val mark = Warrior();
+    val bob = Defender();
+    val mike = Knight();
+    val rog = Warrior();
+    val lancelot = Defender();
+    val eric = Vampire();
+    val adam = Vampire();
+    val richard = Defender();
+    val ogre = Warrior();
+    val freelancer = Lancer();
+    val vampire = Vampire();
 
-    check(fight(chuck, bruce) == true)
-    check(fight(dave, carl) == false)
-    check(chuck.isAlive == true)
-    check(bruce.isAlive == false)
-    check(carl.isAlive == true)
-    check(dave.isAlive == false)
-    check(fight(carl, mark) == false)
-    check(carl.isAlive == false)
-    check(fight(bob, mike) == false)
-    check(fight(lancelot, rog) == true)
-    check(fight(eric, richard) == false)
-    check(fight(ogre, adam) == true)
+    check(fight(chuck, bruce) == true);
+    check(fight(dave, carl) == false);
+    check(chuck.isAlive == true);
+    check(bruce.isAlive == false);
+    check(carl.isAlive == true);
+    check(dave.isAlive == false);
+    check(fight(carl, mark) == false);
+    check(carl.isAlive == false);
+    check(fight(bob, mike) == false);
+    check(fight(lancelot, rog) == true);
+    check(fight(eric, richard) == false);
+    check(fight(ogre, adam) == true);
+    check(fight(freelancer, vampire) == true);
+    check(freelancer.isAlive == true);
 
-    val myArmy = Army().apply {
-        addUnits(2) { Defender() }
-        addUnits(2) { Vampire() }
-        addUnits(1) { Warrior() }
-    }
+    val myArmy = Army();
+    myArmy.addUnits(2) { Defender() };
+    myArmy.addUnits(2) { Vampire() };
+    myArmy.addUnits(4) { Lancer() };
+    myArmy.addUnits(1) { Warrior() };
 
-    val enemyArmy = Army().apply {
-        addUnits(2) { Warrior() }
-        addUnits(2) { Defender() }
-        addUnits(3) { Vampire() }
-    }
+    val enemyArmy = Army();
+    enemyArmy.addUnits(2) { Warrior() };
+    enemyArmy.addUnits(2) { Lancer() };
+    enemyArmy.addUnits(2) { Defender() };
+    enemyArmy.addUnits(3) { Vampire() };
 
-    val army3 = Army().apply {
-        addUnits(1) { Warrior() }
-        addUnits(4) { Defender() }
-    }
+    val army3 = Army();
+    army3.addUnits(1) { Warrior() };
+    army3.addUnits(1) { Lancer() };
+    army3.addUnits(2) { Defender() };
 
-    val army4 = Army().apply {
-        addUnits(3) { Vampire() }
-        addUnits(2) { Warrior() }
-    }
+    val army4 = Army();
+    army4.addUnits(3) { Vampire() };
+    army4.addUnits(1) { Warrior() };
+    army4.addUnits(2) { Lancer() };
 
-    check(fight(myArmy, enemyArmy) == false)
-    check(fight(army3, army4) == true)
+    check(fight(myArmy, enemyArmy) == true);
+    check(fight(army3, army4) == false);
     println("OK")
 }

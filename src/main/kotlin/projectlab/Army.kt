@@ -7,20 +7,41 @@ package org.softserve.projectlab
  *
  */
 class Army() {
-    private val armyQueue: ArrayDeque<Warrior> = ArrayDeque()
+    val armyQueue: ArrayDeque<Warrior> = ArrayDeque()
     private val armyIterator: Iterator<Warrior> = armyQueue.iterator()
-
+    var currentUnit: Warrior? = null
     /**
      * Agrega unidades al ejército.
      *
      * @param cantidad La cantidad de unidades a crear.
      * @param unitCreator Una lambda que inicializa y retorna un objeto de la clase Warrior.
      */
+    init {
+        armyList.add(this)
+    }
+    companion object {
+        var armyList: MutableList<Army> = mutableListOf()
+    }
     fun addUnits(cantidad: Int, unitCreator: () -> Warrior ) {
         repeat(cantidad) {
             val unit: Warrior = unitCreator()
             this.armyQueue.addLast(unit)
         }
+    }
+    fun getUnit(): Warrior? {
+        if (currentUnit == null){
+            if (hasFighters()) {
+                return currentUnit()
+            }
+            return null
+        }
+        while (armyQueue.indexOf(currentUnit) < armyQueue.size) {
+            if (currentUnit!!.isAlive){
+                return currentUnit
+            }
+            currentUnit()
+        }
+        return null
     }
 
     /**
@@ -41,7 +62,8 @@ class Army() {
      *
      * @return El siguiente guerrero vivo en la fila del ejército.
      */
-    fun nextFighter(): Warrior {
-        return armyIterator.next()
+    fun currentUnit(): Warrior? {
+        currentUnit = armyIterator.next()
+        return currentUnit
     }
 }
