@@ -6,10 +6,10 @@ package org.softserve.projectlab
  * @property armyIterator Iterador que recorre cada elemento de la fila
  *
  */
-class Army() {
+class Army(): IEnlister {
     val armyQueue: ArrayDeque<Warrior> = ArrayDeque()
-    private val armyIterator: Iterator<Warrior> = armyQueue.iterator()
-    var currentUnit: Warrior? = null
+    private var armyIterator: Iterator<Warrior> = armyQueue.iterator()
+    var activeFighter: Warrior? = null
     /**
      * Agrega unidades al ejército.
      *
@@ -25,21 +25,23 @@ class Army() {
     fun addUnits(cantidad: Int, unitCreator: () -> Warrior ) {
         repeat(cantidad) {
             val unit: Warrior = unitCreator()
+            enlist(unit)
             this.armyQueue.addLast(unit)
+            communicateWarriorsStatus()
         }
     }
     fun getUnit(): Warrior? {
-        if (currentUnit == null){
+        if (activeFighter == null){
             if (hasFighters()) {
-                return currentUnit()
+                return nextUnit()
             }
             return null
         }
-        while (armyQueue.indexOf(currentUnit) < armyQueue.size) {
-            if (currentUnit!!.isAlive){
-                return currentUnit
+        while (armyQueue.indexOf(activeFighter) < armyQueue.size) {
+            if (activeFighter!!.isAlive){
+                return activeFighter
             }
-            currentUnit()
+            nextUnit()
         }
         return null
     }
@@ -62,8 +64,41 @@ class Army() {
      *
      * @return El siguiente guerrero vivo en la fila del ejército.
      */
-    fun currentUnit(): Warrior? {
-        currentUnit = armyIterator.next()
-        return currentUnit
+    private fun nextUnit(): Warrior? {
+        communicateWarriorsStatus()
+        if (armyIterator.hasNext()){
+            activeFighter = armyIterator.next()
+            while (!activeFighter!!.isAlive) {
+                activeFighter = armyIterator.next()
+            }
+            return activeFighter
+        } else {
+            restoreIterator()
+            cleanCasualties()
+        }
+        return null
     }
+
+    fun restoreIterator() {
+        armyIterator = armyQueue.iterator()
+    }
+
+    fun cleanCasualties() {
+        for (warrior in armyQueue) {
+            if (!warrior.isAlive) {
+                armyQueue.remove(warrior)
+            }
+        }
+    }
+
+    override fun enlist(warrior: Warrior) {
+        warrior.updateMyArmy(this)
+    }
+    override fun communicateWarriorsStatus() {
+        for (warrior in armyQueue){
+            warrior.updatePreviousPartner()
+            warrior.updateFrontPartner()
+        }
+    }
+
 }

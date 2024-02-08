@@ -13,8 +13,14 @@ package org.softserve.projectlab
  */
 open class Warrior(
     open var health: Int = 50,
-    open val attack: Int = 5
-) {
+    open val attack: Int = 5,
+): IEnlisted {
+    override var myArmy: Army? = null
+    override var previousPartner: Warrior? = null
+    override var frontPartner : Warrior? = null
+    var currentEnemy: Warrior? = null
+    private val maxHealth: Int = health
+
     /**
      * @return true si el guerrero está vivo (su salud es mayor que 0), false de lo contrario.
      */
@@ -24,7 +30,43 @@ open class Warrior(
         health -= damage
         return damage
     }
-    open fun attack(target: Warrior) {
-        target.takeDamage(attack)
+
+    fun recover(recoverPoints: Int) {
+        health += recoverPoints
+        if (health > maxHealth) {
+            health = maxHealth
+        }
     }
+    open fun attack(target: Warrior, straightFight: Boolean = false) {
+        currentEnemy = target
+        val inflictedDamage = target.takeDamage(attack)
+        if (!straightFight){
+            showAttack(inflictedDamage)
+        }
+    }
+
+    override fun updateMyArmy(army: Army) {
+        myArmy = army
+    }
+
+    override fun updatePreviousPartner() {
+        if ((previousPartner == null) && (myArmy!!.armyQueue[0] != this)) {
+            previousPartner = myArmy!!.armyQueue[myArmy!!.armyQueue.indexOf(this) - 1]
+        }
+    }
+    override fun updateFrontPartner() {
+        if (((frontPartner == null ) || (!frontPartner!!.isAlive)) && (myArmy!!.armyQueue.indexOf(this) < myArmy!!.armyQueue.lastIndex)){
+            frontPartner = myArmy!!.armyQueue[myArmy!!.armyQueue.indexOf(this) + 1]
+        }
+    }
+
+    override fun showAttack(inflictedDamage: Int) {
+        if (inflictedDamage > 0) {
+            previousPartner?.watchAttack(inflictedDamage, this)
+            frontPartner?.watchAttack(inflictedDamage, this)
+        }
+    }
+
+    override fun watchAttack(inflictedDamage: Int, attacker: Warrior) {}
+
 }

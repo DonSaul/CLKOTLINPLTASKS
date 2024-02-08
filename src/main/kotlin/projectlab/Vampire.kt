@@ -5,7 +5,7 @@ class Vampire(
     attack: Int = 4,
     val vampirism : Int = 50): Warrior(health, attack) {
 
-    override fun attack(target: Warrior) {
+    override fun attack(target: Warrior, straightFight: Boolean) {
         val totalDamage = target.takeDamage(attack)
         vampirism(totalDamage)
     }

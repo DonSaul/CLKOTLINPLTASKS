@@ -18,9 +18,11 @@ class Lancer(
     attack: Int = 6
 ): Warrior(health, attack) {
 
-    override fun attack(target: Warrior) {
+    override fun attack(target: Warrior, straightFight: Boolean) {
         val totalDamage = target.takeDamage(attack)
-        attackNext(getNextEnemy(target), totalDamage)
+        if (!straightFight) {
+            attackNext(getNextEnemy(target), totalDamage)
+        }
     }
 
     /**
@@ -35,12 +37,7 @@ class Lancer(
      * Identifies the current rival's army
      */
     private fun detectArmy(target: Warrior): Army? {
-        for (army in Army.armyList) {
-            if (army.armyQueue.contains(target)) {
-                return army
-            }
-        }
-        return null
+        return target.myArmy
     }
 
     /**
