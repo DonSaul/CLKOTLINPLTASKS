@@ -72,9 +72,6 @@ class Army(): IEnlister {
                 activeFighter = armyIterator.next()
             }
             return activeFighter
-        } else {
-            restoreIterator()
-            cleanCasualties()
         }
         return null
     }
@@ -84,11 +81,14 @@ class Army(): IEnlister {
     }
 
     fun cleanCasualties() {
-        for (warrior in armyQueue) {
+        val armyCopy = armyQueue.toList()
+        for (warrior in armyCopy) {
             if (!warrior.isAlive) {
                 armyQueue.remove(warrior)
             }
         }
+        // println("$this lista: ${armyQueue.size}")
+        restoreIterator()
     }
 
     override fun enlist(warrior: Warrior) {
@@ -100,5 +100,7 @@ class Army(): IEnlister {
             warrior.updateFrontPartner()
         }
     }
-
+    fun activeFighterIsLast(): Boolean{
+        return activeFighter == armyQueue.last()
+    }
 }

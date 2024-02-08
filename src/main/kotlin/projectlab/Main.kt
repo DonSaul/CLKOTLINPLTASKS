@@ -7,9 +7,15 @@ package org.softserve.projectlab
  * @param warrior1 objeto de clase Warrior.
  * @param warrior2 objeto de clase Warrior.
  */
-fun fight(warrior1: Warrior,
-          warrior2: Warrior,
+fun fight(warrior1: Warrior?,
+          warrior2: Warrior?,
           straightFight: Boolean = false): Boolean {
+    if (warrior1 == null) {
+        return false
+    }
+    if (warrior2 == null) {
+        return true
+    }
     while (warrior1.isAlive && warrior2.isAlive) {
         if (straightFight){
             warrior1.attack(warrior2, true)
@@ -42,8 +48,8 @@ fun fight(warrior1: Warrior,
  */
 fun fight(army1: Army,
           army2: Army): Boolean {
-    var warrior1: Warrior = army1.getUnit()!!
-    var warrior2: Warrior = army2.getUnit()!!
+    var warrior1: Warrior? = army1.getUnit()
+    var warrior2: Warrior? = army2.getUnit()
 
     while (army1.hasFighters() && army2.hasFighters() ) {
         val warrior1Win: Boolean = fight(warrior1, warrior2)
@@ -56,24 +62,41 @@ fun fight(army1: Army,
     return army1.hasFighters()
 }
 
+fun straightFight(army1: Army,
+                  army2: Army): Boolean {
+    while (army1.hasFighters() && army2.hasFighters() ) {
+        val warrior1: Warrior? = army1.getUnit()
+        val warrior2: Warrior? = army2.getUnit()
+        fight(warrior1, warrior2, true)
+        for (army in listOf(army1, army2)) {
+            if (army.activeFighterIsLast()) {
+                for (a in listOf(army1, army2)) {
+                    a.cleanCasualties()
+                }
+                break
+            }
+        }
+    }
+    return army1.hasFighters()
+}
 
 fun main() {
-    var chuck = Warrior()
-    var bruce = Warrior()
-    var carl = Knight()
-    var dave = Warrior()
-    var mark = Warrior()
-    var bob = Defender()
-    var mike = Knight()
-    var rog = Warrior()
-    var lancelot = Defender()
-    var eric = Vampire()
-    var adam = Vampire()
-    var richard = Defender()
-    var ogre = Warrior()
-    var freelancer = Lancer()
-    var vampire = Vampire()
-    var priest = Healer()
+    val chuck = Warrior()
+    val bruce = Warrior()
+    val carl = Knight()
+    val dave = Warrior()
+    val mark = Warrior()
+    val bob = Defender()
+    val mike = Knight()
+    val rog = Warrior()
+    val lancelot = Defender()
+    val eric = Vampire()
+    val adam = Vampire()
+    val richard = Defender()
+    val ogre = Warrior()
+    val freelancer = Lancer()
+    val vampire = Vampire()
+    val priest = Healer()
 
     check(fight(chuck, bruce) == true)
     check(fight(dave, carl) == false)
@@ -93,7 +116,7 @@ fun main() {
     priest.heal(freelancer)
     check(freelancer.health == 16)
 
-    var my_army = Army().apply {
+    val myArmy = Army().apply {
         addUnits(2) { Defender() }
         addUnits(1) { Healer() }
         addUnits(2) { Vampire() }
@@ -102,7 +125,7 @@ fun main() {
         addUnits(1) { Warrior() }
     }
 
-    var enemy_army = Army().apply {
+    val enemyArmy = Army().apply {
         addUnits(2) { Warrior() }
         addUnits(4) { Lancer() }
         addUnits(1) { Healer() }
@@ -110,21 +133,32 @@ fun main() {
         addUnits(3) { Vampire() }
         addUnits(1) { Healer() }
     }
-    var army_3 = Army().apply {
+
+    val army3 = Army().apply {
         addUnits(1) { Warrior() }
         addUnits(1) { Lancer() }
         addUnits(1) { Healer() }
         addUnits(2) { Defender() }
     }
 
-    var army_4 = Army().apply {
+    val army4 = Army().apply {
         addUnits(3) { Vampire() }
         addUnits(1) { Warrior() }
         addUnits(1) { Healer() }
         addUnits(2) { Lancer() }
     }
 
-    check(fight(my_army, enemy_army) == false)
-    check(fight(army_3, army_4) == true)
+    val army5 = Army().apply {
+        addUnits(10) { Warrior() }
+    }
+
+    val army6 = Army().apply {
+        addUnits(6) { Warrior() }
+        addUnits(5) { Lancer() }
+    }
+
+    check(fight(myArmy, enemyArmy) == false)
+    check(fight(army3, army4) == true)
+    check(straightFight(army5, army6) == false)
     println("OK")
 }
