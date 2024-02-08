@@ -89,6 +89,7 @@ class Army(): IEnlister {
         }
         // println("$this lista: ${armyQueue.size}")
         restoreIterator()
+        communicateWarriorsStatus()
     }
 
     override fun enlist(warrior: Warrior) {
