@@ -254,7 +254,7 @@ class ArmyBattleTest {
         army2.addUnits(13) { Vampire() }
         assertTrue(fight(army1, army2))
     }
-    
+
     @Test
     fun `army1 should win army2`() {
         val army1 = Army()
