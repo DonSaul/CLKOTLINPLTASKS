@@ -16,12 +16,7 @@ class Army(): IEnlister {
      * @param cantidad La cantidad de unidades a crear.
      * @param unitCreator Una lambda que inicializa y retorna un objeto de la clase Warrior.
      */
-    init {
-        armyList.add(this)
-    }
-    companion object {
-        var armyList: MutableList<Army> = mutableListOf()
-    }
+
     fun addUnits(cantidad: Int, unitCreator: () -> Warrior ) {
         repeat(cantidad) {
             val unit: Warrior = unitCreator()
@@ -31,17 +26,17 @@ class Army(): IEnlister {
         }
     }
     fun getUnit(): Warrior? {
-        if (activeFighter == null){
+        activeFighter?.run {
+            while (armyQueue.indexOf(activeFighter) < armyQueue.size) {
+                if (activeFighter!!.isAlive){
+                    return activeFighter
+                }
+                nextUnit()
+            }
+        } ?: run{
             if (hasFighters()) {
                 return nextUnit()
             }
-            return null
-        }
-        while (armyQueue.indexOf(activeFighter) < armyQueue.size) {
-            if (activeFighter!!.isAlive){
-                return activeFighter
-            }
-            nextUnit()
         }
         return null
     }
@@ -52,12 +47,7 @@ class Army(): IEnlister {
      * @return true si el ejército tiene al menos un guerrero vivo, false de lo contrario.
      */
     fun hasFighters(): Boolean {
-        for (fighter in armyQueue) {
-            if (fighter.isAlive) {
-                return true
-            }
-        }
-        return false
+        return armyQueue.any { it.isAlive }
     }
     /**
      * Obtiene al siguiente guerrero en la fila del ejército.
@@ -81,13 +71,8 @@ class Army(): IEnlister {
     }
 
     fun cleanCasualties() {
-        val armyCopy = armyQueue.toList()
-        for (warrior in armyCopy) {
-            if (!warrior.isAlive) {
-                armyQueue.remove(warrior)
-            }
-        }
-        // println("$this lista: ${armyQueue.size}")
+        val armyQueue = armyQueue.filter { it.isAlive }
+//        println("$this Remaining units: ${armyQueue.size}")
         restoreIterator()
         communicateWarriorsStatus()
     }

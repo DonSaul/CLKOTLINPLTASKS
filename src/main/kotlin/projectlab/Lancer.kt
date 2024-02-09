@@ -36,7 +36,7 @@ class Lancer(
     /**
      * Identifies the current rival's army
      */
-    private fun detectArmy(target: Warrior): Army? {
+    private fun detectEnemyArmy(target: Warrior): Army? {
         return target.myArmy
     }
 
@@ -45,7 +45,7 @@ class Lancer(
      */
 
     private fun getNextEnemy(target: Warrior): Warrior? {
-        val army: Army? = detectArmy(target)
+        val army: Army? = detectEnemyArmy(target)
         if (army != null) {
             var index = army.armyQueue.indexOf(target) + 1
             while (index < army.armyQueue.size) {

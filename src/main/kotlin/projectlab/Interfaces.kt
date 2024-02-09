@@ -16,7 +16,6 @@ interface IEnlisted {
     fun watchAttack(inflictedDamage: Int, attacker: Warrior)
 }
 
-
 interface IHealer {
     fun heal(target: Warrior)
 }

@@ -55,7 +55,7 @@ open class Warrior(
         }
     }
     override fun updateFrontPartner() {
-        if (((frontPartner == null ) || (!frontPartner!!.isAlive)) && (myArmy!!.armyQueue.indexOf(this) < myArmy!!.armyQueue.lastIndex)){
+        if (((frontPartner == null ) || (!frontPartner!!.isAlive)) && (myArmy!!.armyQueue.last() != this)){
             frontPartner = myArmy!!.armyQueue[myArmy!!.armyQueue.indexOf(this) + 1]
         }
     }
