@@ -1,13 +1,19 @@
-fun findTheMissedNumber(array: IntArray): Int {
-    val n = array.size
-    val totalSum = n * (n + 1) / 2
-    val actualSum = array.sum()
-    return totalSum - actualSum
+fun findTheMissedNumber(numbers: IntArray): Int {
+    for (i in 0 until numbers.size - 1) {
+        if (numbers[i] + 1 != numbers[i + 1]) {
+            return numbers[i] + 1
+        }
+    }
+    return -1
 }
 
 fun main() {
-    val inputArray = intArrayOf(3, 0, 1)
-    val findNumber = findTheMissedNumber(inputArray)
-    println("Input: ${inputArray.joinToString(", ")}")
-    println("Output: $findNumber")
+    val numbers = intArrayOf(5, 0, 7)
+    val missingNumber = findTheMissedNumber(numbers)
+
+    if (missingNumber != -1) {
+        println("The missing number is: $missingNumber")
+    } else {
+        println("No missing number found.")
+    }
 }

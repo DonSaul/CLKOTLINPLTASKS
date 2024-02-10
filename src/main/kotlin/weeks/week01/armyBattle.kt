@@ -1,61 +1,105 @@
 package weeks.week01
-
-import Warrior
-import Knight
+import java.util.Stack
 
 class Army {
-    val fighters = mutableListOf<Warrior>()
+    private val units = Stack<Warrior>()
+    private var survivingUnit: Warrior? = null
 
-    fun addUnits(count: Int, warriorFactory:()->Warrior) {
+    fun getUnits(): Stack<Warrior> {
+        return units
+    }
+
+    fun addUnits(count: Int, warriorFactory: () -> Warrior) {
         repeat(count) {
-            fighters.add(warriorFactory.invoke())
+            units.push(warriorFactory.invoke())
         }
+    }
+
+    fun hasUnits(): Boolean {
+        return units.isNotEmpty() || survivingUnit != null
+    }
+
+    fun getNextUnit(): Warrior? {
+        if (survivingUnit != null) {
+            val unit = survivingUnit
+            survivingUnit = null
+            return unit
+        }
+        return if (hasUnits()) units.pop() else null
+    }
+
+    fun setSurvivingUnit(warrior: Warrior?) {
+        survivingUnit = warrior
     }
 }
 
-fun fightArmy(army1: Army, army2: Army): Boolean {
-    var index1 = 0
-    var index2 = 0
+fun getUnitBehind(army: Stack<Warrior>): Warrior? {
+    val tempStack = Stack<Warrior>()
 
-    while (index1 < army1.fighters.size && index2 < army2.fighters.size) {
-        val warrior1 = army1.fighters[index1]
-        val warrior2 = army2.fighters[index2]
+    while (!army.isEmpty()) {
+        val unit = army.pop()
+        return unit
+    }
+    return null
+}
 
-        while (warrior1.isAlive && warrior2.isAlive) {
-            warrior2.receiveDamage(warrior1.attack)
-            if (warrior2.isAlive) {
-                warrior1.receiveDamage(warrior2.attack)
+fun battle(army1: Army, army2: Army): Boolean {
+    var fighter1: Warrior?
+    var fighter2: Warrior?
+    do {
+        fighter1 = army1.getNextUnit()
+        fighter2 = army2.getNextUnit()
+
+
+
+        if (fighter1 != null && fighter2 != null) {
+
+            val warrior1Survived = fight(fighter1, fighter2)
+            if (fighter1 is Lancer) {
+                val unitBehindDefender = getUnitBehind(army2.getUnits())
+                if (unitBehindDefender != null) {
+                    val damage = fighter1.attack * 0.5
+                    unitBehindDefender.receiveDamage(damage)
+                }
+            }
+
+            if (warrior1Survived) {
+                army2.setSurvivingUnit(null)
+            } else {
+                army1.setSurvivingUnit(null)
             }
         }
+    } while (army1.hasUnits() && army2.hasUnits())
 
-        if (warrior1.isAlive) {
-            index2++
-        } else {
-            index1++
-        }
-    }
-
-    return index2 == army2.fighters.size
+    return army1.hasUnits()
 }
 
 fun main() {
-    val army1 = Army()
-    army1.addUnits(3) { Knight() }
+    val myArmy = Army()
+    myArmy.addUnits(2) { Defender() }
+    myArmy.addUnits(2) { Vampire() }
+    myArmy.addUnits(4) { Lancer() }
+    myArmy.addUnits(1) { Warrior() }
 
-    val army2 = Army()
-    army2.addUnits(3) { Warrior() }
+    val enemyArmy = Army()
+    enemyArmy.addUnits(2) { Warrior() }
+    enemyArmy.addUnits(2) { Lancer() }
+    enemyArmy.addUnits(2) { Defender() }
+    enemyArmy.addUnits(3) { Vampire() }
 
-    val army3 = Army()
-    army3.addUnits(20) { Warrior() }
-    army3.addUnits(5) { Knight() }
+    val army3 = Army();
+    army3.addUnits(1) { Warrior() };
+    army3.addUnits(1) { Lancer() };
+    army3.addUnits(2) { Defender() };
 
-    val army4 = Army()
-    army4.addUnits(30) { Warrior() }
+    val army4 = Army();
+    army4.addUnits(3) { Vampire() };
+    army4.addUnits(1) { Warrior() };
+    army4.addUnits(2) { Lancer() };
 
-    val result1 = fightArmy(army1, army4)
-    val result2 = fightArmy(army3, army4)
+    val result = battle(myArmy, enemyArmy)
+    val result2 = battle(army3, army4)
 
-    println("Result 1: Army1 vs. Army2 - ${if (result1) "Army1 wins!" else "Army2 wins!"}")
-    println("Result 2: Army3 vs. Army4 - ${if (result2) "Army3 wins!" else "Army4 wins!"}")
-
+    println("Result: ${if (result) "Army1 wins!" else "Army2 wins!"}")
+    println("Result: ${if (result2) "Army3 wins!" else "Army4 wins!"}")
 }

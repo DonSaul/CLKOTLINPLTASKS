@@ -27,7 +27,6 @@ class BankAccount(
 }
 
 fun main() {
-    // Example usage
     val account = BankAccount("2343255", "Gabriel Urbina", 20000.0)
 
     println("Account Holder: ${account.accountHolder}")

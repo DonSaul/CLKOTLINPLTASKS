@@ -1,5 +1,9 @@
 fun reverseString(input: String): String {
-    return input.reversed()
+    var result = ""
+    for (i in input.length - 1 downTo 0) {
+        result += input[i]
+    }
+    return result
 }
 
 fun main() {
