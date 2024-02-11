@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="tasks.week1.ArmyBattle.ArmyBattleTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-02-07T17:45:20" hostname="JAMIRO" time="0.046">
+<testsuite name="tasks.week1.ArmyBattle.ArmyBattleTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-02-11T02:52:51" hostname="JAMIRO" time="0.041">
   <properties/>
-  <testcase name="army1 should win army2()" classname="tasks.week1.ArmyBattle.ArmyBattleTest" time="0.046"/>
+  <testcase name="9-Unit1(Defender) wins when fight against Unit3(Dwarf-Warrior) but first Unit1 fight against Unit2(Rockie)()" classname="tasks.week1.ArmyBattle.ArmyBattleTest" time="0.041"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

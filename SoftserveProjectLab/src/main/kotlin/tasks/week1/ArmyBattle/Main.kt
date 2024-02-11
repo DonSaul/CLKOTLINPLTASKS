@@ -1,6 +1,7 @@
 package org.example.tasks.week1.ArmyBattle
 
 fun main() {
+
     val myArmy = Army()
     myArmy.addUnits(2) { Dwarfs() }
 

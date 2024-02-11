@@ -1,9 +1,9 @@
 package org.example.tasks.week1.ArmyBattle
 
 class Orcs:UnitArmy() {
-    override val attack: Int = 5
+    override val attack: Int = 7
         init {
-            health = 20
+            health = 50
         }
     override fun damage(damage: Int) {
         health -= damage
@@ -13,7 +13,7 @@ class Orcs:UnitArmy() {
 class Dwarfs:UnitArmy() {
     override val attack: Int = 5
     init {
-        health = 30
+        health = 50
     }
 
     override fun damage(damage: Int) {
