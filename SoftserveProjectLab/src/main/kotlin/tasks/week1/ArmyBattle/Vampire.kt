@@ -7,13 +7,20 @@ class Vampire : UnitArmy() {
         health = 40
     }
 
-    override fun damage(damage: Int) {
-        health -= damage
-        heal(damage)
+    override fun attack(units: List<UnitArmy?>) {
+        val target = units.firstOrNull()
+        if (target != null) {
+            val damageDealt = minOf(attack, target.health)
+            target.damage(damageDealt)
+            heal(damageDealt)
+        }
     }
-
     private fun heal(damage: Int) {
         val healAmount = damage * vampirism / 100
         health = minOf(health + healAmount, 40)
     }
+    override fun damage(damage: Int) {
+        health -= damage
+    }
+
 }

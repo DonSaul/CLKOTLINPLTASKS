@@ -5,13 +5,13 @@ class Lancer: UnitArmy() {
     init {
         health = 50
     }
-    override fun attack(units: List<UnitArmy>) {
+    override fun attack(units: List<UnitArmy?>) {
         super.attack(units)
         if (units.size > 1) {
-            units[1].damage(attack / 2)
+            val damageDealt = minOf(attack / 2, units[1]?.health ?: 0)
+            units[1]?.damage(damageDealt)
         }
     }
-
     override fun damage(damage: Int) {
         health -= damage
         if (health < 0) {

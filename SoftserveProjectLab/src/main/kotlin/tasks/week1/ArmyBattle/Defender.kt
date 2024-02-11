@@ -16,7 +16,7 @@ class Defender() : UnitArmy() {
 }
 
 class Rockie() : UnitArmy() {
-    override val attack: Int = 2
+    override val attack: Int = 1
     init {
         health = 60
     }
