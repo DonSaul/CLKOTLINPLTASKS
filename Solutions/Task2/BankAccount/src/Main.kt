@@ -15,10 +15,6 @@ class BankAccount(val accountNumber: String, val accountHolder: String) {
     private var balance: Double = 0.0
 
     fun withdraw(amount: Double): Double {
-        if(amount <= 0) {
-            throw Exception("The amount to withdraw must be positive")
-        }
-
         if(amount > balance) {
             throw Exception("Not enough funds to withdraw $$amount")
         }
@@ -28,10 +24,6 @@ class BankAccount(val accountNumber: String, val accountHolder: String) {
     }
 
     fun deposit(amount: Double): Double {
-        if(amount <= 0) {
-            throw Exception("The amount to withdraw must be positive")
-        }
-
         balance += amount
         return balance
     }
