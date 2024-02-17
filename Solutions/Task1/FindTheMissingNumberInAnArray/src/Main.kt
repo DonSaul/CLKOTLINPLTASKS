@@ -13,13 +13,13 @@ fun findMissingNumber(list: List<Int>): Int {
     return list.size
 }
 
-fun findMissingNumberBySum(list: List<Int>): Int {
-    val n = list.size
-    val totalSum = n * (n + 1) / 2
-    val listSum = list.sum()
-    return totalSum - listSum
-}
-
 fun findMissingNumberWithLambda(list: List<Int>): Int {
     return list.indices.firstOrNull {it !in list} ?: list.size
+}
+
+fun findMissingNumberBySum(list: List<Int>): Int {
+    val n = list.size
+    val expectedSum = n * (n + 1) / 2
+    val actualSum = list.sum()
+    return expectedSum - actualSum
 }
