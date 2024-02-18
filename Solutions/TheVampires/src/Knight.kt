@@ -1,3 +1,4 @@
 class Knight : Warrior() {
-    override var attack: Int = 7
+    override val attack: Int
+        get() = 7
 }
