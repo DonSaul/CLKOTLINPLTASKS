@@ -7,6 +7,11 @@ import org.junit.jupiter.api.MethodOrderer
 @TestMethodOrder(MethodOrderer.DisplayName::class)
 class VampiresTest {
 
+    class Rookie : Warrior() {
+        override val attack: Int
+            get() = 1
+    }
+
     @Test
     @DisplayName("Fight Test 1: Warrior loses to Knight")
     fun warriorLosesToKnight() {

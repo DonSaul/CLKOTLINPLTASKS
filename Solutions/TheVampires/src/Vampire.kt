@@ -1,13 +1,14 @@
-class Vampire: Warrior() {
-    override var health: Int = 40
-    override val attack: Int = 4
-    private val vampirism: Int = 50
+class Vampire: Warrior(health = 40) {
+    override val attack: Int
+        get() = 4
+    private val vampirism: Int
+        get() = 50
 
-    override fun hit(opponent: Warrior) {
-        val opponentInitialHealth = opponent.health
-        super.hit(opponent)
-        val opponentFinalHealth = opponent.health
-
-        health = (health + (opponentInitialHealth - opponentFinalHealth) * vampirism / 100).coerceAtMost(40)
+    override fun hits(opponent: Warrior) {
+        val healthBefore = opponent.health
+        super.hits(opponent)
+        val damageDealt = healthBefore - opponent.health
+        val healthPoints = damageDealt * vampirism / 100
+        healBy(healthPoints)
     }
 }

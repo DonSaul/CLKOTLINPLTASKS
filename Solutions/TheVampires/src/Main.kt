@@ -12,30 +12,20 @@ fun main() {
 }
 
 fun battle(firstArmy: Army, secondArmy: Army) : Boolean {
+    var result = true
 
-    while(firstArmy.units.isNotEmpty() && secondArmy.units.isNotEmpty()) {
-
-        val firstWarrior: Warrior = firstArmy.units.first()
-        val secondWarrior: Warrior = secondArmy.units.first()
-
-        val isFirstWarriorWinner = fight(firstWarrior, secondWarrior)
-
-        if(isFirstWarriorWinner) {
-            secondArmy.units.removeFirst()
-        } else {
-            firstArmy.units.removeFirst()
-        }
+    for ((attacker, defender) in firstArmy.champions zip secondArmy.champions) {
+         result = fight(attacker, defender)
     }
 
-    return firstArmy.units.isNotEmpty()
+    return result
 }
 
 fun fight(firstWarrior: Warrior, secondWarrior: Warrior) : Boolean {
-    var attacker: Warrior = firstWarrior
-    var defender: Warrior = secondWarrior
+    var (attacker, defender) = firstWarrior to secondWarrior
 
     while(attacker.isAlive) {
-        attacker.hit(defender)
+        attacker hits defender
         attacker = defender.also { defender = attacker }
     }
 
