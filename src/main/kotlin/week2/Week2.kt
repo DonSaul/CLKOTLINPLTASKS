@@ -27,12 +27,33 @@ fun fight(warrior1: Warrior, warrior2: Warrior):Boolean{
     }
 
 }
+//Testing
+fun fightMultiple(attacker:Lancer,defenderFront:Warrior,defenderBack:Warrior):Boolean{
+
+    while(attacker.isAlive){
+
+        attacker.attackMultiple(defenderFront,defenderBack)
+        //Only check the front, keep attacking dead back corpse if it dies first
+        if (!defenderFront.isAlive){
+            return true
+        }
+
+
+
+    }
+
+    return false
+
+}
+
 
 fun fight(attackingArmy: Army, defendingArmy: Army):Boolean{
 
     while (true){
 
         fight(attackingArmy.units.first, defendingArmy.units.first)
+
+
 
         if (!attackingArmy.units.first.isAlive){
             attackingArmy.units.removeFirst()
