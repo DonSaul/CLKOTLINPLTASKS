@@ -3,13 +3,20 @@ package org.example.tasks.week1.ArmyBattle
 fun main() {
 
     val myArmy = Army()
-    myArmy.addUnits(1) { Healer() }
-    myArmy.addUnits(3) {Dwarfs()}
+    myArmy.addUnits(7) {Lancer()}
+    myArmy.addUnits(3) {Vampire()}
+    myArmy.addUnits(1) {Healer()}
+    myArmy.addUnits(4) {Dwarfs()}
+    myArmy.addUnits(1) {Healer()}
+    myArmy.addUnits(2) {Defender()}
 
 
     val enemyArmy = Army()
-    enemyArmy.addUnits(3) { Orcs() }
-    enemyArmy.addUnits(1) {Lancer()}
+    enemyArmy.addUnits(4) {Dwarfs()}
+    enemyArmy.addUnits(4) {Defender()}
+    enemyArmy.addUnits(1) {Healer()}
+    enemyArmy.addUnits(6) {Vampire()}
+    enemyArmy.addUnits(4) {Lancer()}
 
 /*
     val fellowship = Army()
@@ -27,7 +34,7 @@ fun main() {
     println("My Army: ")
     myArmy.printUnits()
 
-    println("Enemy")
+    println("Enemy: ")
     enemyArmy.printUnits()
 
     if (myFirstFight) println("The winner is: myArmy") else println("The winner is: EnemyArmy")

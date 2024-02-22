@@ -52,7 +52,7 @@ class ArmyBattleTest {
         assertTrue(zeusSurvive)
     }
 
-//    "5. Fight": [
+    //    "5. Fight": [
 //    prepare_test(middle_code='''husband = Warrior()
 //    wife = Warrior()
 //    fight(husband, wife)''',
@@ -337,5 +337,27 @@ class ArmyBattleTest {
         armyLancer.addUnits(1) { Lancer() }
         armyLancer.addUnits(1) { Dwarfs() }
         assertFalse(fight(armyWarrior, armyLancer))
+    }
+
+    
+    @Test
+    fun `Army1(Lancer, 1 - Dwarf, 3 - Healer, 1 - Dwarf, 4 - Healer, 1 - Orc, 2) should be defeated against Army2(Dwarf, 4 - Defender, 4 - Healer, 1 - Vampire, 6 - Lancer, 4)`() {
+        val army1 = Army()
+        val army2 = Army()
+
+    army1.addUnits(1) {Lancer()}
+    army1.addUnits(3) {Dwarfs()}
+    army1.addUnits(1) {Healer()}
+    army1.addUnits(4) {Dwarfs()}
+    army1.addUnits(1) {Healer()}
+    army1.addUnits(2) {Orcs()}
+
+    army2.addUnits(4) {Dwarfs()}
+    army2.addUnits(4) {Defender()}
+    army2.addUnits(1) {Healer()}
+    army2.addUnits(6) {Vampire()}
+    army2.addUnits(4) {Lancer()}
+
+    assertFalse(fight(army1, army2))
     }
 }
