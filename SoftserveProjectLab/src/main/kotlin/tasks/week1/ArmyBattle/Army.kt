@@ -8,15 +8,17 @@ class Army {
         }
     }
 
-    fun survivedUnits(): List<UnitArmy> {
-        return unitsArmy.filter { it.isAlive }
-    }
-
     fun firstSurvivedUnit(): UnitArmy? {
         return unitsArmy.firstOrNull { it.isAlive }
     }
 
     fun killFirstUnit() {
         unitsArmy.removeAll { !it.isAlive }
+    }
+    fun printUnits() {
+        println("Total units: ${unitsArmy.size}")
+        unitsArmy.forEach { unit ->
+            println("Unit type: ${unit::class.simpleName} | Health: ${unit.health}")
+        }
     }
 }

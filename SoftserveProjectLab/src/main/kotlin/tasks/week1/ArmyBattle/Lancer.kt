@@ -1,10 +1,16 @@
 package org.example.tasks.week1.ArmyBattle
 
-class Lancer: UnitArmy() {
+class Lancer : UnitArmy() {
     override val attack: Int = 6
+
     init {
         health = 50
     }
+
+    override fun getMaxHealth(): Int {
+        return 50
+    }
+
     override fun attack(units: List<UnitArmy?>) {
         super.attack(units)
         if (units.size > 1) {
@@ -12,6 +18,7 @@ class Lancer: UnitArmy() {
             units[1]?.damage(damageDealt)
         }
     }
+
     override fun damage(damage: Int) {
         health -= damage
         if (health < 0) {
