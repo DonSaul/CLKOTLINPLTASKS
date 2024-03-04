@@ -339,7 +339,7 @@ class ArmyBattleTest {
         assertFalse(fight(armyWarrior, armyLancer))
     }
 
-    
+
     @Test
     fun `Army1(Lancer, 1 - Dwarf, 3 - Healer, 1 - Dwarf, 4 - Healer, 1 - Orc, 2) should be defeated against Army2(Dwarf, 4 - Defender, 4 - Healer, 1 - Vampire, 6 - Lancer, 4)`() {
         val army1 = Army()
