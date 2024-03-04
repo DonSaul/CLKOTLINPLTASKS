@@ -12,6 +12,7 @@ class Defender() : UnitArmy() {
         return 60
     }
 
+
     override fun damage(damage: Int) {
         val actualDamage = maxOf(0, damage - defense)
         health -= actualDamage
@@ -24,6 +25,7 @@ class Rockie() : UnitArmy() {
     override fun getMaxHealth(): Int {
         return 60
     }
+
 
     init {
         health = 60

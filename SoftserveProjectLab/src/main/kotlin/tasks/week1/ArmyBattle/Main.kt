@@ -6,8 +6,18 @@ fun main() {
     val army1 = Army()
     val army2 = Army()
 
-    army1.addUnits(2) {Dwarfs()}
-    army2.addUnits(3) {Dwarfs()}
+    army1.addUnits(4) { Lancer() }
+    army1.addUnits(3) { Dwarfs() }
+    army1.addUnits(1) { Healer() }
+    army1.addUnits(4) { Dwarfs() }
+    army1.addUnits(1) { Healer() }
+    army1.addUnits(2) { Orcs() }
+
+    army2.addUnits(4) { Dwarfs() }
+    army2.addUnits(4) { Defender() }
+    army2.addUnits(1) { Healer() }
+    army2.addUnits(2) { Vampire() }
+    army2.addUnits(4) { Lancer() }
 
     val winner = battle.straightFight(army1, army2)
     println("Tha winner is: ${if (winner) "Army1" else "Army2"}")

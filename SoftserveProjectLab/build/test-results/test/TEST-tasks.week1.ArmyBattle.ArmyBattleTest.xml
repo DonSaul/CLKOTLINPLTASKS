@@ -1,7 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="tasks.week1.ArmyBattle.ArmyBattleTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-02-22T18:48:39" hostname="JAMIRO" time="0.053">
+<testsuite name="tasks.week1.ArmyBattle.ArmyBattleTest" tests="31" skipped="0" failures="0" errors="0" timestamp="2024-03-04T22:21:48" hostname="JAMIRO" time="0.212">
   <properties/>
-  <testcase name="Army1 should be defeated against Army2()" classname="tasks.week1.ArmyBattle.ArmyBattleTest" time="0.053"/>
+  <testcase name="15-Army1(Lancer, 5 - Vampire, 3 - Dwarf-Warrior, 4, Defender, 2) is defeated against Army2(Dwarf-Warrior, 4 - Defender, 4 - Vampire, 6 - Lancer, 5)()" classname="tasks.week1.ArmyBattle.ArmyBattleTest" time="0.056"/>
+  <testcase name="11-Army1(Defender, 5 - Vampire, 6 - Dwarf-Warrior, 7) is defeated against Army2(Dwarf-Warrior, 6 - Defender, 6 - Vampire, 6)()" classname="tasks.week1.ArmyBattle.ArmyBattleTest" time="0.006"/>
+  <testcase name="7-Unit2(Orc-Knight) die before fight against Unit3(Dwarf-Warrior) but first fight against Unit1(Dwarf-Warrior)()" classname="tasks.week1.ArmyBattle.ArmyBattleTest" time="0.005"/>
+  <testcase name="3-Army1(Dwarf-Warrior,5) is defeated before fight against Army2(Dwarf-Warrior,7)()" classname="tasks.week1.ArmyBattle.ArmyBattleTest" time="0.002"/>
+  <testcase name="1-Army1(Dwarf-Warrior,1) is defeated before fight against Army2(Dwarf-Warrior,2)()" classname="tasks.week1.ArmyBattle.ArmyBattleTest" time="0.002"/>
+  <testcase name="5-Wife(Dwarf-Warrior) is defeated against Husband(Dwarf-Warrior)()" classname="tasks.week1.ArmyBattle.ArmyBattleTest" time="0.003"/>
+  <testcase name="1-Carl(Dwarf-Warrior) must be defeated against jim(Orc-Knight)()" classname="tasks.week1.ArmyBattle.ArmyBattleTest" time="0.003"/>
+  <testcase name="8-Unit1(Defender) remains with a life percentage of 60 when fight against Unit2(Rockie)()" classname="tasks.week1.ArmyBattle.ArmyBattleTest" time="0.004"/>
+  <testcase name="2-Ramon(Orc-Knight) must win against Slevin(Dwarf-Warrior)()" classname="tasks.week1.ArmyBattle.ArmyBattleTest" time="0.003"/>
+  <testcase name="13-Army1(Defender, 11 - Vampire, 3 - Dwarf-Warrior, 4) defeat Army2(Dwarf-Warrior, 4 - Defender, 4 - Vampire, 13)()" classname="tasks.week1.ArmyBattle.ArmyBattleTest" time="0.005"/>
+  <testcase name="6-Army1(Dwarf-Warrior, 11) defeat Army2(Dwarf-Warrior, 7)()" classname="tasks.week1.ArmyBattle.ArmyBattleTest" time="0.005"/>
+  <testcase name="4-Zeus(Orc-Knight) survive when fight against GodKiller(Dwarf-Warrior)()" classname="tasks.week1.ArmyBattle.ArmyBattleTest" time="0.002"/>
+  <testcase name="4-Army1(Dwarf-Warrior,20) is defeated before fight against Army2(Dwarf-Warrior,21)()" classname="tasks.week1.ArmyBattle.ArmyBattleTest" time="0.005"/>
+  <testcase name="19-Test For straightFight, Army1(Lancer, 5 - Vampire, 3 - Warrior-Dwarf, 4 - Defender, 2) is defeated against Army2(Warrior-Dwarf, 4 - Defender, 4 - Vampire, 6 - Lancer, 5)()" classname="tasks.week1.ArmyBattle.ArmyBattleTest" time="0.01"/>
+  <testcase name="14-Army(Defender, 9 - Vampire, 3 - Dwarf-Warrior, 8) Defeat Army2(Dwarf-Warrior, 4 - Defender, 4 - Vampire, 13)()" classname="tasks.week1.ArmyBattle.ArmyBattleTest" time="0.005"/>
+  <testcase name="21-Test for straightFight, Army1(Lancer, 7 - Vampire, 3 - Healer, 1 - Warrior-Dwarf, 4 - Healer, 1 - Defender, 2) defeat Army2(Warrior-Dwarf, 4 - Defender, 4 - Healer, 1 - Vampire, 6 - Lancer, 4)()" classname="tasks.week1.ArmyBattle.ArmyBattleTest" time="0.009"/>
+  <testcase name="10-Army1(Defender, 3 - Dwarf-Warrior, 1) is defeated against Army2(Dwarf-Warrior, 5)()" classname="tasks.week1.ArmyBattle.ArmyBattleTest" time="0.005"/>
+  <testcase name="2-Army1(Dwarf-Warrior,2) is defeated before fight against Army2(Dwarf-Warrior,3)()" classname="tasks.week1.ArmyBattle.ArmyBattleTest" time="0.005"/>
+  <testcase name="Test for straightFight, Army1(Lancer, 4 -Warrior-Dwarfs, 3 - Healer, 1 - Warrior-dwarf, 4 - Healer, 1 - Knight-Orc, 2) should defeat Army2(Dwarf-Warrior, 4 - Defender, 4 - Healer, 1 - vampire, 2 - Lancer, 4)()" classname="tasks.week1.ArmyBattle.ArmyBattleTest" time="0.008"/>
+  <testcase name="20-Test for straightFight, Army1(Lancer, 7 - Vampire, 3 - Dwarf-Warrior, 4 - Defender, 2) defeat Army2(Dwarf-Warrior, 4 - Defender, 4 - Vampire, 6 - Lancer, 4)()" classname="tasks.week1.ArmyBattle.ArmyBattleTest" time="0.007"/>
+  <testcase name="16-Army1(Lancer, 7 - Vampire, 3 - Dwarf-Warrior, 4 - Defender, 2) Defeat Army2(Dwarf-Warrior, 4 - Defender, 4 - Vampire, 6 - Lancer, 4)()" classname="tasks.week1.ArmyBattle.ArmyBattleTest" time="0.005"/>
+  <testcase name="18-Army1(Lancer, 1 - Dwarf, 3 - Healer, 1 - Dwarf, 4 - Healer, 1 - Orc, 2) should be defeated against Army2(Dwarf, 4 - Defender, 4 - Healer, 1 - Vampire, 6 - Lancer, 4)()" classname="tasks.week1.ArmyBattle.ArmyBattleTest" time="0.007"/>
+  <testcase name="9-Army1(Dwarf-Warrior, 10 - Defender, 15) Defeat Army2(Dwarf-Warrior, 5)()" classname="tasks.week1.ArmyBattle.ArmyBattleTest" time="0.003"/>
+  <testcase name="5-Army1(Dwarf-Warrior, 10) defeat Army2(Dwarf-Warrior, 11)()" classname="tasks.week1.ArmyBattle.ArmyBattleTest" time="0.003"/>
+  <testcase name="12-Army1(Defender, 2 - Vampire, 3 - Dwarf-Warrior, 4) is defeated against Army2(Dwarf-Warrior, 4 - Defender, 4 - Vampire, 3)()" classname="tasks.week1.ArmyBattle.ArmyBattleTest" time="0.004"/>
+  <testcase name="6-Dragon(Dwarf-Warrior) fight against Knight(Orc-Knight) and knight win the fight()" classname="tasks.week1.ArmyBattle.ArmyBattleTest" time="0.004"/>
+  <testcase name="3-Bob(Dwarf-Warrior) still is alive before fight against Mars(Dwarf-Warrior) ()" classname="tasks.week1.ArmyBattle.ArmyBattleTest" time="0.002"/>
+  <testcase name="7-Army1(Dwarf-Warrior, 5 &amp;&amp; Defender, 9) defeat Army2(Dwarf-Warrior, 4)()" classname="tasks.week1.ArmyBattle.ArmyBattleTest" time="0.002"/>
+  <testcase name="8-Army1(Defender, 9 - Dwarf-Warrior, 20) defeat Army2(Dwarf-Warrior, 21)()" classname="tasks.week1.ArmyBattle.ArmyBattleTest" time="0.003"/>
+  <testcase name="17-ArmyWarrior(Dwarf-Warrior, 2) is defeated against ArmyLancer(Lancer, 1 - Dwarf-Warrior,1)()" classname="tasks.week1.ArmyBattle.ArmyBattleTest" time="0.002"/>
+  <testcase name="9-Unit1(Defender) wins when fight against Unit3(Dwarf-Warrior) but first Unit1 fight against Unit2(Rockie)()" classname="tasks.week1.ArmyBattle.ArmyBattleTest" time="0.002"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

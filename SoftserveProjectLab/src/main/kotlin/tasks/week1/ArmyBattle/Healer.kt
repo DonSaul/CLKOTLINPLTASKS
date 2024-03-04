@@ -6,6 +6,8 @@ class Healer : UnitArmy() {
     init {
         health = 60
     }
+    fun healStraight(unit: UnitArmy) {
+    }
     override fun getMaxHealth(): Int {
         return 60
     }

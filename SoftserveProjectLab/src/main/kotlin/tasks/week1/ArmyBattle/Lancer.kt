@@ -19,6 +19,10 @@ class Lancer : UnitArmy() {
         }
     }
 
+    fun attackStraight(unit: UnitArmy) {
+        super.attack(listOf(unit))
+    }
+
     override fun damage(damage: Int) {
         health -= damage
         if (health < 0) {

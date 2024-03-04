@@ -341,23 +341,106 @@ class ArmyBattleTest {
 
 
     @Test
-    fun `Army1(Lancer, 1 - Dwarf, 3 - Healer, 1 - Dwarf, 4 - Healer, 1 - Orc, 2) should be defeated against Army2(Dwarf, 4 - Defender, 4 - Healer, 1 - Vampire, 6 - Lancer, 4)`() {
+    fun `18-Army1(Lancer, 1 - Dwarf, 3 - Healer, 1 - Dwarf, 4 - Healer, 1 - Orc, 2) should be defeated against Army2(Dwarf, 4 - Defender, 4 - Healer, 1 - Vampire, 6 - Lancer, 4)`() {
         val army1 = Army()
         val army2 = Army()
 
-    army1.addUnits(1) {Lancer()}
-    army1.addUnits(3) {Dwarfs()}
-    army1.addUnits(1) {Healer()}
-    army1.addUnits(4) {Dwarfs()}
-    army1.addUnits(1) {Healer()}
-    army1.addUnits(2) {Orcs()}
+        army1.addUnits(1) { Lancer() }
+        army1.addUnits(3) { Dwarfs() }
+        army1.addUnits(1) { Healer() }
+        army1.addUnits(4) { Dwarfs() }
+        army1.addUnits(1) { Healer() }
+        army1.addUnits(2) { Orcs() }
 
-    army2.addUnits(4) {Dwarfs()}
-    army2.addUnits(4) {Defender()}
-    army2.addUnits(1) {Healer()}
-    army2.addUnits(6) {Vampire()}
-    army2.addUnits(4) {Lancer()}
+        army2.addUnits(4) { Dwarfs() }
+        army2.addUnits(4) { Defender() }
+        army2.addUnits(1) { Healer() }
+        army2.addUnits(6) { Vampire() }
+        army2.addUnits(4) { Lancer() }
 
-    assertFalse(fight(army1, army2))
+        assertFalse(fight(army1, army2))
+    }
+
+    @Test
+    fun `19-Test For straightFight, Army1(Lancer, 5 - Vampire, 3 - Warrior-Dwarf, 4 - Defender, 2) is defeated against Army2(Warrior-Dwarf, 4 - Defender, 4 - Vampire, 6 - Lancer, 5)`() {
+        val army1 = Army()
+        val army2 = Army()
+        val battle = Battle()
+
+        army1.addUnits(5) { Lancer() }
+        army1.addUnits(3) { Vampire() }
+        army1.addUnits(4) { Dwarfs() }
+        army1.addUnits(2) { Defender() }
+
+        army2.addUnits(4) { Dwarfs() }
+        army2.addUnits(4) { Defender() }
+        army2.addUnits(6) { Vampire() }
+        army2.addUnits(5) { Lancer() }
+
+        assertFalse(battle.straightFight(army1, army2))
+    }
+
+
+    @Test
+    fun `20-Test for straightFight, Army1(Lancer, 7 - Vampire, 3 - Dwarf-Warrior, 4 - Defender, 2) defeat Army2(Dwarf-Warrior, 4 - Defender, 4 - Vampire, 6 - Lancer, 4)`() {
+        val army1 = Army()
+        val army2 = Army()
+        val battle = Battle()
+
+        army1.addUnits(7) { Lancer() }
+        army1.addUnits(3) { Vampire() }
+        army1.addUnits(4) { Dwarfs() }
+        army1.addUnits(2) { Defender() }
+
+        army2.addUnits(4) { Dwarfs() }
+        army2.addUnits(4) { Defender() }
+        army2.addUnits(6) { Vampire() }
+        army2.addUnits(4) { Lancer() }
+        assertTrue(battle.straightFight(army1, army2))
+    }
+
+    @Test
+    fun `21-Test for straightFight, Army1(Lancer, 7 - Vampire, 3 - Healer, 1 - Warrior-Dwarf, 4 - Healer, 1 - Defender, 2) defeat Army2(Warrior-Dwarf, 4 - Defender, 4 - Healer, 1 - Vampire, 6 - Lancer, 4)`() {
+        val army1 = Army()
+        val army2 = Army()
+        val battle = Battle()
+
+        army1.addUnits(7) { Lancer() }
+        army1.addUnits(3) { Vampire() }
+        army1.addUnits(1) { Healer() }
+        army1.addUnits(4) { Dwarfs() }
+        army1.addUnits(1) { Healer() }
+        army1.addUnits(2) { Defender() }
+
+        army2.addUnits(4) { Dwarfs() }
+        army2.addUnits(4) { Defender() }
+        army2.addUnits(1) { Healer() }
+        army2.addUnits(6) { Vampire() }
+        army2.addUnits(4) { Lancer() }
+
+        assertFalse(battle.straightFight(army1, army2))
+    }
+
+
+    @Test
+    fun `Test for straightFight, Army1(Lancer, 4 -Warrior-Dwarfs, 3 - Healer, 1 - Warrior-dwarf, 4 - Healer, 1 - Knight-Orc, 2) should defeat Army2(Dwarf-Warrior, 4 - Defender, 4 - Healer, 1 - vampire, 2 - Lancer, 4)`() {
+        val army1 = Army()
+        val army2 = Army()
+        val battle = Battle()
+
+        army1.addUnits(4) { Lancer() }
+        army1.addUnits(3) { Dwarfs() }
+        army1.addUnits(1) { Healer() }
+        army1.addUnits(4) { Dwarfs() }
+        army1.addUnits(1) { Healer() }
+        army1.addUnits(2) { Orcs() }
+
+        army2.addUnits(4) { Dwarfs() }
+        army2.addUnits(4) { Defender() }
+        army2.addUnits(1) { Healer() }
+        army2.addUnits(2) { Vampire() }
+        army2.addUnits(4) { Lancer() }
+
+        assertTrue(battle.straightFight(army1, army2))
     }
 }
